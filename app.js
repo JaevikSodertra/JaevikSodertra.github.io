@@ -1,4 +1,4 @@
-// тема
+// Тема
 const themeToggle = document.getElementById('themeToggle');
 const saved = localStorage.getItem('theme');
 if (saved) document.documentElement.setAttribute('data-theme', saved);
@@ -8,7 +8,7 @@ themeToggle?.addEventListener('click', () => {
   localStorage.setItem('theme', current);
 });
 
-// мобильное меню
+// Мобильное меню
 const navToggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
 navToggle?.addEventListener('click', () => {
@@ -16,10 +16,11 @@ navToggle?.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 
-// год в футере
-document.getElementById('year').textContent = new Date().getFullYear();
+// Год в футере
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// плавный скролл
+// Плавный скролл
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href'); if (!id || id === '#') return;
@@ -28,34 +29,22 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// scroll-анимации
+// Scroll-анимации
 const items = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-  });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
 }, { threshold: 0.15 });
 items.forEach(el => io.observe(el));
 
-// модальные окна проектов
+// Модалки проектов
 const openers = document.querySelectorAll('.project[data-modal]');
 openers.forEach(card => {
   const id = card.getAttribute('data-modal');
-  card.querySelector('button')?.addEventListener('click', (ev) => {
-    ev.stopPropagation();
-    document.getElementById(id)?.classList.add('open');
-  });
-  // кликабельна вся карточка
-  card.addEventListener('click', (ev) => {
-    if (ev.target.tagName.toLowerCase() !== 'button') {
-      document.getElementById(id)?.classList.add('open');
-    }
-  });
+  const open = () => document.getElementById(id)?.classList.add('open');
+  card.querySelector('button')?.addEventListener('click', (ev) => { ev.stopPropagation(); open(); });
+  card.addEventListener('click', (ev) => { if (ev.target.tagName.toLowerCase() !== 'button') open(); });
 });
-
 document.querySelectorAll('.modal').forEach(m => {
-  m.addEventListener('click', (e) => {
-    if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open');
-  });
+  m.addEventListener('click', (e) => { if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open'); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') m.classList.remove('open'); });
 });
