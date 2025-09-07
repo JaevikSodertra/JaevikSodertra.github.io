@@ -1,6 +1,4 @@
 /* Шрифт */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root{
   --bg:#0b0c10; --panel:rgba(255,255,255,.06); --text:#e8e8e8; --muted:#b8b8b8;
   --brand:#00d4ff; --brand-2:#7c4dff; --border:rgba(255,255,255,.12);
