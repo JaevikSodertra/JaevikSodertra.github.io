@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://JaevikSodertra.github.io/sitemap.xml
