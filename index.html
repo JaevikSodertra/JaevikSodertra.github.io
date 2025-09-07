@@ -326,8 +326,8 @@
       <h2>Последние записи</h2>
     </div>
     <ul class="latest-posts">
-      {% assign posts = site.pages | where_exp: 'p', "p.path contains 'posts/'" | sort: 'date' | reverse | limit: 3 %}
-      {% for post in posts %}
+      {% assign posts = site.pages | where_exp: 'p', "p.path contains 'posts/'" | sort: 'date' | reverse %}
+      {% for post in posts limit: 3 %}
       <li><a href="{{ post.url }}">{{ post.title }}</a> <span>{{ post.date | date: "%d.%m.%Y" }}</span></li>
       {% endfor %}
     </ul>
