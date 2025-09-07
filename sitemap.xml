@@ -1,15 +1,14 @@
+---
+layout: none
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% assign pages = site.pages | where_exp: 'p', "p.path contains '.html' or p.path contains '.md'" %}
+{% for page in pages %}
   <url>
-    <loc>https://jaeviksodertra.github.io/</loc>
-    <lastmod>2025-09-07</lastmod>
+    <loc>{{ page.url | absolute_url }}</loc>
+    <lastmod>{{ page.date | default: site.time | date_to_xmlschema }}</lastmod>
   </url>
-  <url>
-    <loc>https://jaeviksodertra.github.io/about.html</loc>
-    <lastmod>2025-09-07</lastmod>
-  </url>
-  <url>
-    <loc>https://jaeviksodertra.github.io/404.html</loc>
-    <lastmod>2025-09-07</lastmod>
-  </url>
+{% endfor %}
 </urlset>
+
