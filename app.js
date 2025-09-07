@@ -11,7 +11,7 @@ themeToggle?.addEventListener('click', () => {
 
 // Мобильное меню
 const navToggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
+const navList = document.getElementById('mainNav');
 navToggle?.addEventListener('click', () => {
   const open = navList.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
