@@ -66,3 +66,31 @@ document.querySelectorAll('.quote .more').forEach(btn => {
   });
 });
 
+// Отправка формы
+const contactForm = document.querySelector('.contact-form');
+contactForm?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const statusEl = contactForm.querySelector('.form-status');
+  statusEl.hidden = true;
+  const data = new FormData(contactForm);
+  try {
+    const response = await fetch(contactForm.action, {
+      method: contactForm.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      contactForm.reset();
+      statusEl.textContent = 'Сообщение отправлено!';
+      statusEl.className = 'form-status success';
+    } else {
+      statusEl.textContent = 'Ошибка при отправке. Попробуйте позже.';
+      statusEl.className = 'form-status error';
+    }
+  } catch (err) {
+    statusEl.textContent = 'Ошибка сети. Попробуйте позже.';
+    statusEl.className = 'form-status error';
+  }
+  statusEl.hidden = false;
+});
+
