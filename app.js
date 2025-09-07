@@ -48,3 +48,21 @@ document.querySelectorAll('.modal').forEach(m => {
   m.addEventListener('click', (e) => { if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open'); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') m.classList.remove('open'); });
 });
+
+// Разворачиваем отзывы
+document.querySelectorAll('.quote .more').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const block = btn.parentElement.querySelector('.quote-text');
+    const collapsed = block.hasAttribute('data-collapsed');
+    if (collapsed) {
+      block.removeAttribute('data-collapsed');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.textContent = 'Свернуть';
+    } else {
+      block.setAttribute('data-collapsed', '');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = 'Читать полностью';
+    }
+  });
+});
+
