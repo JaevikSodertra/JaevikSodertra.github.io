@@ -1,26 +1,79 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title>Обо мне</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Обо мне — Artem Chernov</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Обо мне</h1>
-    <nav>
-      <a href="index.html">Главная</a> |
-      <a href="about.html">Обо мне</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span class="logo-dot"></span> Artem Chernov</a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html#projects">Проекты</a></li>
+          <li><a href="index.html#experience">Опыт</a></li>
+          <li><a href="index.html#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="gradient"></div>
   </header>
 
-  <main>
-    <h2>Здесь можно рассказать о себе</h2>
-    <p>Привет! Меня зовут [ваше имя]. Это моя страница на GitHub Pages.</p>
+  <main class="container section">
+    <div class="section-header">
+      <h2>Обо мне</h2>
+      <p>Мидл дата-инженер. Делаю устойчивые пайплайны, прозрачные модели и наблюдаемость «по умолчанию».</p>
+    </div>
+
+    <div class="features">
+      <article class="card">
+        <h3>Кто я</h3>
+        <p>Работаю в Китае, понимаю процессы кросс-бордер логистики CN→RU и e-commerce. Параллельно веду инвест-проект с акцентом на дивиденды и публичные обзоры компаний.</p>
+      </article>
+      <article class="card">
+        <h3>Чем помогаю</h3>
+        <p>Собираю данные из TMS/WMS/CRM и внешних API, проектирую DWH (staging→marts), настраиваю ETL/ELT, ввожу метрики качества и SLA. Делаю удобные витрины и дашборды.</p>
+      </article>
+      <article class="card">
+        <h3>Коммуникация</h3>
+        <p>RU / ZH / EN; умею мостить процессы между бизнесом, операциями и техникой. Объясняю решения простым языком и фиксирую договорённости в документации.</p>
+      </article>
+    </div>
+
+    <section class="section">
+      <h2>Подход</h2>
+      <ul>
+        <li><strong>Сначала данные → потом визуализация.</strong> Чистота слоёв и повторяемость трансформаций.</li>
+        <li><strong>Наблюдаемость с первого дня.</strong> Freshness/uniqueness тесты, алерты, трассировка.</li>
+        <li><strong>Версионирование и CI/CD.</strong> dbt-модели, GitHub Actions, ревью и промоут окружений.</li>
+        <li><strong>Стоимость владения.</strong> Минимум зоопарка, S3-совместимые стораджи, ClickHouse там, где это уместно.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Хобби и проекты</h2>
+      <ul>
+        <li>Контент-проект «Черновик реальности» — философски-ироничные наблюдения, международная аудитория.</li>
+        <li>Инвест-блог «Биржевой спекулянт» — дивидендная стратегия, разборы эмитентов.</li>
+        <li>Языки: прокачиваю китайский, иногда преподаю/помогаю с переводами (RU↔ZH↔JP).</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Технологии</h2>
+      <p>Python, SQL (Postgres, ClickHouse), Airflow/Prefect, Spark, dbt Core, Kafka/Redpanda, S3/MinIO, Docker, Metabase/Superset, GitHub Actions, Linux.</p>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 Мой сайт</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Artem Chernov · Data Engineer</span>
+      <a href="index.html" class="to-top">← На главную</a>
+    </div>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
