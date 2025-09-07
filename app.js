@@ -28,14 +28,34 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// scroll-анимации через IntersectionObserver
+// scroll-анимации
 const items = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      io.unobserve(e.target);
-    }
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
   });
 }, { threshold: 0.15 });
 items.forEach(el => io.observe(el));
+
+// модальные окна проектов
+const openers = document.querySelectorAll('.project[data-modal]');
+openers.forEach(card => {
+  const id = card.getAttribute('data-modal');
+  card.querySelector('button')?.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    document.getElementById(id)?.classList.add('open');
+  });
+  // кликабельна вся карточка
+  card.addEventListener('click', (ev) => {
+    if (ev.target.tagName.toLowerCase() !== 'button') {
+      document.getElementById(id)?.classList.add('open');
+    }
+  });
+});
+
+document.querySelectorAll('.modal').forEach(m => {
+  m.addEventListener('click', (e) => {
+    if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open');
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') m.classList.remove('open'); });
+});
