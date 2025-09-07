@@ -1,26 +1,256 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title>Мой сайт</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artem Chernov — Data Engineer</title>
+  <meta name="description" content="Мидл дата-инженер: продакшн-ETL, стриминг, DWH, оркестрация, наблюдаемость. Проекты в логистике CN→RU, автоперевозках и финтехе." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='22' ry='22' x='4' y='4' width='92' height='92' fill='%2300d4ff'/%3E%3Ctext x='50' y='62' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3EDE%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Artem Chernov",
+    "jobTitle":"Data Engineer",
+    "url":"https://JaevikSodertra.github.io/",
+    "knowsLanguage":["ru","zh","en","ja"],
+    "sameAs":["https://github.com/JaevikSodertra"]
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Добро пожаловать!</h1>
-    <nav>
-      <a href="index.html">Главная</a> |
-      <a href="about.html">Обо мне</a>
-    </nav>
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="На главную">
+        <span class="logo-dot"></span> Artem Chernov
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-list">
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#skills">Навыки</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#experience">Опыт</a></li>
+          <li><a href="#contact">Контакты</a></li>
+          <li><button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌓</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="gradient"></div>
   </header>
 
-  <main>
-    <h2>Главная страница</h2>
-    <p>Это мой первый сайт на GitHub Pages.</p>
-  </main>
+  <!-- HERO -->
+  <section class="hero container" id="top">
+    <div class="hero-text">
+      <h1>Data Engineer <span class="accent">с фокусом на логистику и финансы</span></h1>
+      <p>Строю надёжные конвейеры данных, DWH и стриминг, чтобы бизнес принимал решения по фактам, а не интуицией. Люблю понятную архитектуру, наблюдаемость и скорость доставки ценности.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#projects">Смотреть проекты</a>
+        <a class="btn ghost" href="#contact">Связаться</a>
+      </div>
+      <div class="stats">
+        <div><strong>2–3 года</strong><span>продакшн-опыта</span></div>
+        <div><strong>CN→RU</strong><span>логистика, автоперевозки</span></div>
+        <div><strong>Fin</strong><span>дивиденды, отчётность</span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1551281044-8d8d0d8b16a8?q=80&w=1400&auto=format&fit=crop" alt="Данные и инфраструктура" />
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Мой сайт</p>
+  <!-- ОБО МНЕ -->
+  <section class="section container" id="about">
+    <div class="section-header">
+      <h2>Обо мне</h2>
+      <p>Живу и работаю в Китае, хорошо понимаю процессы кросс-бордер логистики (CN→RU) и e-commerce. Параллельно развиваю инвестиционный проект с акцентом на дивиденды. Русский, китайский (рабочий), английский; могу коммуницировать на японском.</p>
+    </div>
+
+    <div class="features">
+      <article class="card">
+        <h3>Инженерия данных</h3>
+        <p>ETL/ELT (Airflow/Prefect), Spark, dbt Core, Postgres, ClickHouse, DuckDB, Parquet, S3-совместимые хранилища.</p>
+      </article>
+      <article class="card">
+        <h3>Стриминг и интеграции</h3>
+        <p>Kafka/Redpanda, CDC (Debezium), webhooks, интеграции с CRM/WMS/TMS, парсинг API поставщиков в Китае.</p>
+      </article>
+      <article class="card">
+        <h3>Данные → Решения</h3>
+        <p>Март-модели в DWH, метрики и дашборды (Metabase/Superset), SLA/SLI, алерты, trace-логирование.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- НАВЫКИ -->
+  <section class="section container" id="skills">
+    <div class="section-header">
+      <h2>Технологии и подходы</h2>
+      <p>Инструменты, которыми пользуюсь ежедневно.</p>
+    </div>
+    <div class="skills">
+      <span class="tag">Python</span>
+      <span class="tag">SQL (Postgres, ClickHouse)</span>
+      <span class="tag">Airflow / Prefect</span>
+      <span class="tag">Spark / PySpark</span>
+      <span class="tag">dbt Core</span>
+      <span class="tag">Kafka / Redpanda</span>
+      <span class="tag">S3 / MinIO</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Metabase / Superset</span>
+      <span class="tag">GitHub Actions</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Chinese B2</span>
+    </div>
+  </section>
+
+  <!-- ПРОЕКТЫ -->
+  <section class="section container" id="projects">
+    <div class="section-header">
+      <h2>Выбранные проекты</h2>
+      <p>Описание реальных задач, близких к моему домену. Цифры — про эффективность и устойчивость.</p>
+    </div>
+
+    <div class="grid">
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop" alt="Логистический стриминг" loading="lazy" />
+        <div class="project-body">
+          <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
+          <p>Настроил ingestion статусов из китайских TMS/WMS (webhooks + polling), нормализацию, дедупликацию и доставку в DWH. Реализовал SLA-мониторинг по плечам (сортировка, граница, доставка). Ушли от Excel, время появления события в аналитике — минуты.</p>
+          <ul class="mini">
+            <li>Kafka + Debezium, Airflow, ClickHouse</li>
+            <li>Снижение «слепых зон» по статусам на 70%</li>
+            <li>Алерты по просрочке → −18% штрафов</li>
+          </ul>
+          <a class="btn small" href="#" aria-disabled="true">Архитектура по запросу</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop" alt="Стоимость перевозки" loading="lazy" />
+        <div class="project-body">
+          <h3>Калькулятор полной логистической стоимости</h3>
+          <p>Собрал витрину расходов: пошлины, СВХ, брокерские, утилизационный сбор, спецопции. dbt-модели с прозрачными правилами и версиями. Бизнес получил сверяемые цифры «сквозняком» от инвойса до продажи.</p>
+          <ul class="mini">
+            <li>dbt Core, Postgres, DuckDB (dev)</li>
+            <li>Время расчёта → сек., ошибок в отчётах −40%</li>
+          </ul>
+          <a class="btn small" href="#" aria-disabled="true">Демо витрины</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Дивидендная аналитика" loading="lazy" />
+        <div class="project-body">
+          <h3>Дивидендная аналитика (RU рынок)</h3>
+          <p>ETL прайсов/календарей, нормализация отчётности (МСФО/РСБУ), витрина по выплатам и реинвестам. Дашборды с DY, payout ratio и сезонностью.</p>
+          <ul class="mini">
+            <li>Airflow, Pandas, Parquet, Metabase</li>
+            <li>Автообновление → Telegram отчёт/скрин</li>
+          </ul>
+          <a class="btn small" href="#" aria-disabled="true">Снимки дашбордов</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="Наблюдаемость пайплайнов" loading="lazy" />
+        <div class="project-body">
+          <h3>Наблюдаемость пайплайнов и качество данных</h3>
+          <p>Ввёл SLA/SLI, data-quality проверки (стэбинес, уникальность, свежесть), алерты в Telegram. Ложноположительных стало меньше за счёт порогов и seasonality-baseline.</p>
+          <ul class="mini">
+            <li>Great Expectations / Soda, Prometheus + Grafana</li>
+            <li>MTTR задач упал ~на 35%</li>
+          </ul>
+          <a class="btn small" href="#" aria-disabled="true">Скрины дашбордов</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ОПЫТ -->
+  <section class="section container" id="experience">
+    <div class="section-header">
+      <h2>Опыт</h2>
+      <p>Крупные компании и кросс-функциональные команды (продукт + аналитика + IT). Ниже — кратко и по делу.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-head">
+          <strong>Data Engineer</strong> · Лид-логистический маркетплейс (RU)
+        </div>
+        <div class="t-body">
+          <ul>
+            <li>Оркестрация ETL/ELT (Airflow), миграция SQL-скриптов в dbt, стандартизованные слои staging → marts.</li>
+            <li>Метрики SLA по маршрутам CN→RU, алерты в Telegram, дешёвое долговременное хранилище (S3-совместимое).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-head">
+          <strong>Data Engineer</strong> · Кросс-бордер автологистика (CN→RU)
+        </div>
+        <div class="t-body">
+          <ul>
+            <li>Интеграции с TMS/WMS и CRM поставщиков в Китае (API, webhooks), нормализация статусов и единицы измерения.</li>
+            <li>Витрина затрат (пошлина, СВХ, брокер, оклейка, допы); отчётность для операционного и фин-блока.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-head">
+          <strong>Data Engineer</strong> · Финтех/инвест-сервис (RU)
+        </div>
+        <div class="t-body">
+          <ul>
+            <li>Парсинг/очистка дивидендной истории и корпоративных действий, календарь выплат, карточки эмитентов.</li>
+            <li>Экспорт витрин в дашборды для контент-канала (RU/EN), автопостинг сводок.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section class="section container" id="contact">
+    <div class="section-header">
+      <h2>Контакты</h2>
+      <p>Кратко опишите задачу и ограничения по срокам — предложу архитектуру и план.</p>
+    </div>
+
+    <div class="contact">
+      <div class="contact-card">
+        <h3>Открыт к сотрудничеству</h3>
+        <p>Проекты: логистика/склады, финансы/отчётность, контент-аналитика. Форматы — консалтинг, разработка, поддержка.</p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:hello@example.com">hello@example.com</a>
+          <a class="btn ghost" href="https://github.com/JaevikSodertra" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <p class="form-note">Языки: RU / ZH / EN / JP (базово).</p>
+      </div>
+
+      <form class="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+        <label>Ваше имя <input required name="name" placeholder="Иван" /></label>
+        <label>Email <input type="email" required name="email" placeholder="name@mail.com" /></label>
+        <label>Сообщение <textarea required name="message" rows="4" placeholder="Нужно собрать витрину логистических затрат..." ></textarea></label>
+        <button class="btn primary" type="submit">Отправить</button>
+        <p class="form-note">* Для продакшн-формы позже подключим Formspree / любой бэкенд.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Artem Chernov · Data Engineer</span>
+      <a href="#top" class="to-top" aria-label="Наверх">↑ Наверх</a>
+    </div>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
