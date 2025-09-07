@@ -20,17 +20,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html"><span class="logo-dot"></span> Artem Chernov</a>
-      <nav aria-label="Навигация"><ul class="nav-list">
-        <li><a href="index.html#projects">Проекты</a></li>
-        <li><a href="index.html#experience">Опыт</a></li>
-        <li><a href="index.html#contact">Контакты</a></li>
-      </ul></nav>
-    </div>
-    <div class="gradient"></div>
-  </header>
+  <!--#include virtual="partials/header.html" -->
 
   <main class="container section">
     <div class="section-header">
@@ -63,13 +53,7 @@
       </ul>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Artem Chernov · Data Engineer</span>
-      <a href="index.html" class="to-top">← На главную</a>
-    </div>
-  </footer>
+  <!--#include virtual="partials/footer.html" -->
   <script src="app.js" defer></script>
 </body>
 </html>

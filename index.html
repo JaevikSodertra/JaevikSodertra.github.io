@@ -32,28 +32,10 @@
   </script>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#top"><span class="logo-dot"></span> Artem Chernov</a>
-      <nav class="nav" aria-label="Навигация">
-        <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
-        <ul class="nav-list">
-          <li><a href="about.html">Обо мне</a></li>
-          <li><a href="#skills">Навыки</a></li>
-          <li><a href="#experience">Опыт</a></li>
-          <li><a href="#projects">Проекты</a></li>
-          <li><a href="#testimonials">Отзывы</a></li>
-          <li><a href="#contact">Контакты</a></li>
-          <li><button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌓</button></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="gradient"></div>
-  </header>
+  <!--#include virtual="partials/header.html" -->
 
   <!-- HERO: текст + фон-картинка на всю ширину -->
-  <section class="hero" id="top">
+  <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text reveal">
         <h1>Data Engineer <span class="accent">с фокусом на логистику и финансы</span></h1>
@@ -327,13 +309,7 @@
       </form>
     </div>
   </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Artem Chernov · Data Engineer</span>
-      <a href="#top" class="to-top" aria-label="Наверх">↑ Наверх</a>
-    </div>
-  </footer>
+  <!--#include virtual="partials/footer.html" -->
 
   <!-- Модальные окна проектов -->
   <div class="modal" id="p1" aria-hidden="true" role="dialog" aria-modal="true">
