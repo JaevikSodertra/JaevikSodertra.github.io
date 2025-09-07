@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artem Chernov — Data Engineer</title>
-  <meta name="description" content="Мидл дата-инженер: продакшн-ETL, стриминг, DWH, оркестрация, наблюдаемость. Проекты в логистике CN→RU, автоперевозках и финтехе." />
+  <meta name="description" content="Мидл дата-инженер: продакшн-ETL, стриминг, DWH, наблюдаемость. Проекты в логистике CN→RU и финтехе." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='22' ry='22' x='4' y='4' width='92' height='92' fill='%2300d4ff'/%3E%3Ctext x='50' y='62' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3EDE%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
@@ -20,17 +20,14 @@
   </script>
 </head>
 <body>
-  <!-- ШАПКА -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="На главную">
-        <span class="logo-dot"></span> Artem Chernov
-      </a>
-
+      <a class="logo" href="#top" aria-label="На главную"><span class="logo-dot"></span> Artem Chernov</a>
       <nav class="nav" aria-label="Навигация">
         <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
         <ul class="nav-list">
-          <li><a href="#about">Обо мне</a></li>
+          <li><a href="about.html">Обо мне</a></li>
           <li><a href="#skills">Навыки</a></li>
           <li><a href="#projects">Проекты</a></li>
           <li><a href="#experience">Опыт</a></li>
@@ -44,9 +41,9 @@
 
   <!-- HERO -->
   <section class="hero container" id="top">
-    <div class="hero-text">
+    <div class="hero-text reveal">
       <h1>Data Engineer <span class="accent">с фокусом на логистику и финансы</span></h1>
-      <p>Строю надёжные конвейеры данных, DWH и стриминг, чтобы бизнес принимал решения по фактам, а не интуицией. Люблю понятную архитектуру, наблюдаемость и скорость доставки ценности.</p>
+      <p>Строю надёжные конвейеры данных, DWH и стриминг, чтобы решения принимались по фактам. Люблю понятную архитектуру, наблюдаемость и быстрый time-to-value.</p>
       <div class="hero-cta">
         <a class="btn primary" href="#projects">Смотреть проекты</a>
         <a class="btn ghost" href="#contact">Связаться</a>
@@ -57,41 +54,18 @@
         <div><strong>Fin</strong><span>дивиденды, отчётность</span></div>
       </div>
     </div>
-    <div class="hero-media">
+    <div class="hero-media reveal">
       <img src="https://images.unsplash.com/photo-1551281044-8d8d0d8b16a8?q=80&w=1400&auto=format&fit=crop" alt="Данные и инфраструктура" />
     </div>
   </section>
 
-  <!-- ОБО МНЕ -->
-  <section class="section container" id="about">
-    <div class="section-header">
-      <h2>Обо мне</h2>
-      <p>Живу и работаю в Китае, хорошо понимаю процессы кросс-бордер логистики (CN→RU) и e-commerce. Параллельно развиваю инвестиционный проект с акцентом на дивиденды. Русский, китайский (рабочий), английский; могу коммуницировать на японском.</p>
-    </div>
-
-    <div class="features">
-      <article class="card">
-        <h3>Инженерия данных</h3>
-        <p>ETL/ELT (Airflow/Prefect), Spark, dbt Core, Postgres, ClickHouse, DuckDB, Parquet, S3-совместимые хранилища.</p>
-      </article>
-      <article class="card">
-        <h3>Стриминг и интеграции</h3>
-        <p>Kafka/Redpanda, CDC (Debezium), webhooks, интеграции с CRM/WMS/TMS, парсинг API поставщиков в Китае.</p>
-      </article>
-      <article class="card">
-        <h3>Данные → Решения</h3>
-        <p>Март-модели в DWH, метрики и дашборды (Metabase/Superset), SLA/SLI, алерты, trace-логирование.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- НАВЫКИ -->
+  <!-- SKILLS -->
   <section class="section container" id="skills">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>Технологии и подходы</h2>
       <p>Инструменты, которыми пользуюсь ежедневно.</p>
     </div>
-    <div class="skills">
+    <div class="skills reveal">
       <span class="tag">Python</span>
       <span class="tag">SQL (Postgres, ClickHouse)</span>
       <span class="tag">Airflow / Prefect</span>
@@ -103,66 +77,66 @@
       <span class="tag">Metabase / Superset</span>
       <span class="tag">GitHub Actions</span>
       <span class="tag">Linux</span>
-      <span class="tag">Chinese B2</span>
+      <span class="tag">RU / ZH / EN</span>
     </div>
   </section>
 
-  <!-- ПРОЕКТЫ -->
+  <!-- PROJECTS -->
   <section class="section container" id="projects">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>Выбранные проекты</h2>
-      <p>Описание реальных задач, близких к моему домену. Цифры — про эффективность и устойчивость.</p>
+      <p>Кейсы, близкие моему домену. Цифры — про эффективность и устойчивость.</p>
     </div>
 
     <div class="grid">
-      <article class="project">
-        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop" alt="Логистический стриминг" loading="lazy" />
+      <article class="project reveal">
+        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop" alt="Логистический стриминг" />
         <div class="project-body">
           <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
-          <p>Настроил ingestion статусов из китайских TMS/WMS (webhooks + polling), нормализацию, дедупликацию и доставку в DWH. Реализовал SLA-мониторинг по плечам (сортировка, граница, доставка). Ушли от Excel, время появления события в аналитике — минуты.</p>
+          <p>Ingestion статусов из китайских TMS/WMS (webhooks + polling), нормализация, дедупликация и доставка в DWH. SLA-мониторинг по плечам (сортировка, граница, доставка).</p>
           <ul class="mini">
             <li>Kafka + Debezium, Airflow, ClickHouse</li>
-            <li>Снижение «слепых зон» по статусам на 70%</li>
-            <li>Алерты по просрочке → −18% штрафов</li>
+            <li>Снижение «слепых зон» по статусам ~70%</li>
+            <li>−18% штрафов благодаря своевременным алертам</li>
           </ul>
           <a class="btn small" href="#" aria-disabled="true">Архитектура по запросу</a>
         </div>
       </article>
 
-      <article class="project">
-        <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop" alt="Стоимость перевозки" loading="lazy" />
+      <article class="project reveal">
+        <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop" alt="Стоимость перевозки" />
         <div class="project-body">
           <h3>Калькулятор полной логистической стоимости</h3>
-          <p>Собрал витрину расходов: пошлины, СВХ, брокерские, утилизационный сбор, спецопции. dbt-модели с прозрачными правилами и версиями. Бизнес получил сверяемые цифры «сквозняком» от инвойса до продажи.</p>
+          <p>Витрина расходов: пошлины, СВХ, брокерские, утилизационный сбор, доп-работы. dbt-модели с версионированием и тестами качества.</p>
           <ul class="mini">
             <li>dbt Core, Postgres, DuckDB (dev)</li>
-            <li>Время расчёта → сек., ошибок в отчётах −40%</li>
+            <li>Скорость расчёта — секунды, ошибок −40%</li>
           </ul>
           <a class="btn small" href="#" aria-disabled="true">Демо витрины</a>
         </div>
       </article>
 
-      <article class="project">
-        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Дивидендная аналитика" loading="lazy" />
+      <article class="project reveal">
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Дивидендная аналитика" />
         <div class="project-body">
           <h3>Дивидендная аналитика (RU рынок)</h3>
-          <p>ETL прайсов/календарей, нормализация отчётности (МСФО/РСБУ), витрина по выплатам и реинвестам. Дашборды с DY, payout ratio и сезонностью.</p>
+          <p>ETL прайсов/календарей, нормализация МСФО/РСБУ, витрина по выплатам/реинвестам. Дашборды с DY, payout ratio и сезонностью.</p>
           <ul class="mini">
             <li>Airflow, Pandas, Parquet, Metabase</li>
-            <li>Автообновление → Telegram отчёт/скрин</li>
+            <li>Автопостинг сводок в Telegram</li>
           </ul>
-          <a class="btn small" href="#" aria-disabled="true">Снимки дашбордов</a>
+          <a class="btn small" href="#" aria-disabled="true">Скриншоты по запросу</a>
         </div>
       </article>
 
-      <article class="project">
-        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="Наблюдаемость пайплайнов" loading="lazy" />
+      <article class="project reveal">
+        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="DQ/Observability" />
         <div class="project-body">
-          <h3>Наблюдаемость пайплайнов и качество данных</h3>
-          <p>Ввёл SLA/SLI, data-quality проверки (стэбинес, уникальность, свежесть), алерты в Telegram. Ложноположительных стало меньше за счёт порогов и seasonality-baseline.</p>
+          <h3>Наблюдаемость и качество данных</h3>
+          <p>SLI/SLA, freshness/uniqueness-тесты, алерты, trace-логирование. Настроены пороги, сезонные базовые линии.</p>
           <ul class="mini">
             <li>Great Expectations / Soda, Prometheus + Grafana</li>
-            <li>MTTR задач упал ~на 35%</li>
+            <li>MTTR задач ↓ ~35%</li>
           </ul>
           <a class="btn small" href="#" aria-disabled="true">Скрины дашбордов</a>
         </div>
@@ -170,63 +144,55 @@
     </div>
   </section>
 
-  <!-- ОПЫТ -->
+  <!-- EXPERIENCE -->
   <section class="section container" id="experience">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>Опыт</h2>
-      <p>Крупные компании и кросс-функциональные команды (продукт + аналитика + IT). Ниже — кратко и по делу.</p>
+      <p>Крупные компании и кросс-функциональные команды (продукт + аналитика + IT).</p>
     </div>
 
     <div class="timeline">
-      <div class="t-item">
-        <div class="t-head">
-          <strong>Data Engineer</strong> · Лид-логистический маркетплейс (RU)
-        </div>
+      <div class="t-item reveal">
+        <div class="t-head"><strong>Data Engineer</strong> · Лид-логистический маркетплейс (RU)</div>
         <div class="t-body">
           <ul>
-            <li>Оркестрация ETL/ELT (Airflow), миграция SQL-скриптов в dbt, стандартизованные слои staging → marts.</li>
-            <li>Метрики SLA по маршрутам CN→RU, алерты в Telegram, дешёвое долговременное хранилище (S3-совместимое).</li>
+            <li>Оркестрация ETL/ELT (Airflow), перенос SQL-скриптов в dbt, слой marts.</li>
+            <li>SLA по маршрутам CN→RU, дешёвое долговременное хранилище (S3-совместимое).</li>
           </ul>
         </div>
       </div>
-
-      <div class="t-item">
-        <div class="t-head">
-          <strong>Data Engineer</strong> · Кросс-бордер автологистика (CN→RU)
-        </div>
+      <div class="t-item reveal">
+        <div class="t-head"><strong>Data Engineer</strong> · Кросс-бордер автологистика (CN→RU)</div>
         <div class="t-body">
           <ul>
-            <li>Интеграции с TMS/WMS и CRM поставщиков в Китае (API, webhooks), нормализация статусов и единицы измерения.</li>
-            <li>Витрина затрат (пошлина, СВХ, брокер, оклейка, допы); отчётность для операционного и фин-блока.</li>
+            <li>Интеграции с TMS/WMS/CRM в Китае (API, webhooks), нормализация статусов.</li>
+            <li>Витрина затрат (пошлина, СВХ, брокер, оклейка, допы) для фин-блока.</li>
           </ul>
         </div>
       </div>
-
-      <div class="t-item">
-        <div class="t-head">
-          <strong>Data Engineer</strong> · Финтех/инвест-сервис (RU)
-        </div>
+      <div class="t-item reveal">
+        <div class="t-head"><strong>Data Engineer</strong> · Финтех/инвест-сервис</div>
         <div class="t-body">
           <ul>
-            <li>Парсинг/очистка дивидендной истории и корпоративных действий, календарь выплат, карточки эмитентов.</li>
-            <li>Экспорт витрин в дашборды для контент-канала (RU/EN), автопостинг сводок.</li>
+            <li>Календарь дивидендов и корпоративных действий, карточки эмитентов.</li>
+            <li>Дашборды для контент-канала, автопостинг.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- КОНТАКТЫ -->
+  <!-- CONTACT -->
   <section class="section container" id="contact">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>Контакты</h2>
-      <p>Кратко опишите задачу и ограничения по срокам — предложу архитектуру и план.</p>
+      <p>Опишите кратко задачу и ожидания по срокам — предложу архитектуру и план.</p>
     </div>
 
     <div class="contact">
-      <div class="contact-card">
+      <div class="contact-card reveal">
         <h3>Открыт к сотрудничеству</h3>
-        <p>Проекты: логистика/склады, финансы/отчётность, контент-аналитика. Форматы — консалтинг, разработка, поддержка.</p>
+        <p>Домены: логистика/склады, финансы/отчётность, контент-аналитика. Форматы — консалтинг, разработка, поддержка.</p>
         <div class="contact-actions">
           <a class="btn primary" href="mailto:hello@example.com">hello@example.com</a>
           <a class="btn ghost" href="https://github.com/JaevikSodertra" target="_blank" rel="noreferrer">GitHub</a>
@@ -234,7 +200,7 @@
         <p class="form-note">Языки: RU / ZH / EN / JP (базово).</p>
       </div>
 
-      <form class="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+      <form class="contact-form reveal" action="mailto:hello@example.com" method="post" enctype="text/plain">
         <label>Ваше имя <input required name="name" placeholder="Иван" /></label>
         <label>Email <input type="email" required name="email" placeholder="name@mail.com" /></label>
         <label>Сообщение <textarea required name="message" rows="4" placeholder="Нужно собрать витрину логистических затрат..." ></textarea></label>
