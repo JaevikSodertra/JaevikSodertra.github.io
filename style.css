@@ -92,12 +92,32 @@ p{margin:0 0 16px;max-width:70ch} ul,li{margin:0 0 8px 20px;padding:0}
 .project-body{padding:14px}
 .project-body p{color:var(--muted);margin-top:6px}
 
-/* Testimonials */
-.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.quote{margin:0;padding:18px;border-radius:var(--radius);border:1px solid var(--border);background:var(--panel);backdrop-filter:blur(8px);box-shadow:var(--shadow)}
-.quote blockquote{margin:0 0 10px;font-style:italic}
-.quote figcaption{color:var(--muted)}
-.avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid var(--border);margin-bottom:10px}
+/* Testimonials (обновлённые) */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.quote{
+  margin:0;padding:18px;border-radius:var(--radius);
+  border:1px solid var(--border);background:var(--panel);
+  backdrop-filter:blur(8px);box-shadow:var(--shadow)
+}
+.quote-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid var(--border)}
+.meta{color:var(--muted);font-size:13px}
+.quote-text{margin:0 0 12px;color:var(--text)}
+.facts{margin:0 0 12px 18px;color:var(--muted)}
+.facts li{margin:4px 0}
+.more{
+  display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;
+  background:transparent;border:1px solid var(--border);color:var(--text);cursor:pointer
+}
+
+/* сворачивание/разворачивание длинного текста */
+.quote-text[data-collapsed]{
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
 
 /* Timeline */
 .timeline{display:grid;gap:14px}
