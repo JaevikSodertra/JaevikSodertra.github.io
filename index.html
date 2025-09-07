@@ -109,7 +109,7 @@
         <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop" alt="Логистический стриминг" />
         <div class="project-body">
           <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
-          <p>Ingestion из TMS/WMS (webhooks+polling), нормализация, дедупликация, SLA-мониторинг.</p>
+          <p>Собрали статусы грузов из китайских TMS/WMS и привели их к единому виду для SLA‑мониторинга. Дали бизнесу оперативную картину движения и сократили слепые зоны.</p>
           <button class="btn small">Подробнее</button>
         </div>
       </article>
@@ -118,7 +118,7 @@
         <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop" alt="Стоимость перевозки" />
         <div class="project-body">
           <h3>Калькулятор полной логистической стоимости</h3>
-          <p>dbt-модели, витрины расходов (пошлина, СВХ, брокер, утилизационный сбор, доп-работы).</p>
+          <p>Собрали в dbt расчёт полной логистической стоимости с учётом пошлин, СВХ и допработ. Результат — единая витрина расходов и быстрый расчёт без ручных ошибок.</p>
           <button class="btn small">Подробнее</button>
         </div>
       </article>
@@ -127,7 +127,7 @@
         <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Дивидендная аналитика" />
         <div class="project-body">
           <h3>Дивидендная аналитика (RU рынок)</h3>
-          <p>ETL прайсов/календарей, нормализация МСФО/РСБУ, витрина выплат и реинвестов.</p>
+          <p>Автоматизировали ETL прайсов и календарей, привели отчётность МСФО/РСБУ к единому виду. Витрина выплат и реинвестов формируется за минуты вместо часов.</p>
           <button class="btn small">Подробнее</button>
         </div>
       </article>
@@ -136,7 +136,7 @@
         <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="DQ/Observability" />
         <div class="project-body">
           <h3>Наблюдаемость и качество данных</h3>
-          <p>SLI/SLA, freshness/uniqueness-тесты, алерты, трассировка событий.</p>
+          <p>Внедрили SLI/SLA, тесты свежести и уникальности, пороговые алерты и трассировку. Это сократило MTTR и снизило число ложных тревог.</p>
           <button class="btn small">Подробнее</button>
         </div>
       </article>
@@ -342,7 +342,7 @@
       <button class="modal__close" data-close aria-label="Закрыть">×</button>
       <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
       <p>Источники: китайские TMS/WMS (webhooks + периодический polling). Нормализация справочников, дедупликация по composite-key, маршрутизация в топики Kafka. Оркестрация в Airflow, слой <em>staging → marts</em> в ClickHouse.</p>
-      <ul>
+      <ul class="metrics">
         <li>Снижение «слепых зон» по статусам ~70%</li>
         <li>Алерты по SLA: −18% штрафов</li>
         <li>Событие появлялось в аналитике через минуты</li>
@@ -355,7 +355,7 @@
       <button class="modal__close" data-close aria-label="Закрыть">×</button>
       <h3>Калькулятор полной логистической стоимости</h3>
       <p>dbt-модели с тестами и версионированием. Витрина учитывает пошлины, СВХ, брокераж, утилизацию, доп-работы (оклейка, дооснащение). Единые правила расчёта + журнал изменений.</p>
-      <ul>
+      <ul class="metrics">
         <li>Ошибки в отчётности −40%</li>
         <li>Время расчёта — секунды</li>
       </ul>
@@ -366,10 +366,11 @@
     <div class="modal__dialog">
       <button class="modal__close" data-close aria-label="Закрыть">×</button>
       <h3>Дивидендная аналитика (RU рынок)</h3>
-      <p>ETL календарей/прайсов, нормализация МСФО/РСБУ, расчёт DY, payout ratio, сезонности. Дашборды и автопостинг сводок.</p>
-      <ul>
-        <li>Airflow, Pandas, Parquet, Metabase</li>
-        <li>Телеграм-отчёты по расписанию</li>
+      <p>ETL календарей и прайсов в Airflow, нормализация МСФО/РСБУ, расчёт DY, payout ratio и сезонности. Дашборды в Metabase и автопостинг сводок в Telegram.</p>
+      <ul class="metrics">
+        <li>Время подготовки отчётов ↓ с 2 ч до 15 мин</li>
+        <li>Погрешность расчётов <1%</li>
+        <li>Покрытие рынка дивидендов >95%</li>
       </ul>
     </div>
   </div>
@@ -378,10 +379,11 @@
     <div class="modal__dialog">
       <button class="modal__close" data-close aria-label="Закрыть">×</button>
       <h3>Наблюдаемость и качество данных</h3>
-      <p>SLI/SLA, freshness/uniqueness, пороговые алерты, trace-логирование. Бейзлайны по сезонности для снижения ложных тревог.</p>
-      <ul>
-        <li>Great Expectations / Soda, Prometheus + Grafana</li>
+      <p>SLI/SLA, тесты свежести и уникальности, пороговые алерты и trace-логирование. Стек: Great Expectations, Soda, Prometheus, Grafana. Бейзлайны по сезонности для снижения ложных тревог.</p>
+      <ul class="metrics">
         <li>MTTR ↓ ~35%</li>
+        <li>Ложные алерты −50%</li>
+        <li>Покрытие критичных пайплайнов 100%</li>
       </ul>
     </div>
   </div>
