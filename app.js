@@ -46,8 +46,15 @@ openers.forEach(card => {
   card.addEventListener('click', (ev) => { if (ev.target.tagName.toLowerCase() !== 'button') open(); });
 });
 document.querySelectorAll('.modal').forEach(m => {
-  m.addEventListener('click', (e) => { if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open'); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') m.classList.remove('open'); });
+  m.addEventListener('click', (e) => {
+    if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open');
+  });
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const open = document.querySelector('.modal.open');
+    if (open) open.classList.remove('open');
+  }
 });
 
 // Разворачиваем отзывы
