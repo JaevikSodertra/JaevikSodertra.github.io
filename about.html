@@ -10,13 +10,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html"><span class="logo-dot"></span> Artem Chernov</a>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="index.html#projects">Проекты</a></li>
-          <li><a href="index.html#experience">Опыт</a></li>
-          <li><a href="index.html#contact">Контакты</a></li>
-        </ul>
-      </nav>
+      <nav><ul class="nav-list">
+        <li><a href="index.html#projects">Проекты</a></li>
+        <li><a href="index.html#experience">Опыт</a></li>
+        <li><a href="index.html#contact">Контакты</a></li>
+      </ul></nav>
     </div>
     <div class="gradient"></div>
   </header>
@@ -29,41 +27,27 @@
 
     <div class="features">
       <article class="card">
-        <h3>Кто я</h3>
-        <p>Работаю в Китае, понимаю процессы кросс-бордер логистики CN→RU и e-commerce. Параллельно веду инвест-проект с акцентом на дивиденды и публичные обзоры компаний.</p>
+        <h3>Фокус</h3>
+        <p>Логистика CN→RU (TMS/WMS/CRM интеграции, статусы и SLA), автоперевозки, e-commerce, финансовая аналитика (дивиденды/отчётность).</p>
       </article>
       <article class="card">
-        <h3>Чем помогаю</h3>
-        <p>Собираю данные из TMS/WMS/CRM и внешних API, проектирую DWH (staging→marts), настраиваю ETL/ELT, ввожу метрики качества и SLA. Делаю удобные витрины и дашборды.</p>
+        <h3>Инструменты</h3>
+        <p>Python, SQL (Postgres/ClickHouse), Airflow/Prefect, Spark, dbt Core, Kafka/Redpanda, S3/MinIO, Docker, Metabase/Superset, GitHub Actions, Linux.</p>
       </article>
       <article class="card">
         <h3>Коммуникация</h3>
-        <p>RU / ZH / EN; умею мостить процессы между бизнесом, операциями и техникой. Объясняю решения простым языком и фиксирую договорённости в документации.</p>
+        <p>RU / ZH / EN; умею связывать продукт, аналитику и технику. Документирую решения и держу SLA/SLI.</p>
       </article>
     </div>
 
     <section class="section">
-      <h2>Подход</h2>
+      <h2>Принципы</h2>
       <ul>
-        <li><strong>Сначала данные → потом визуализация.</strong> Чистота слоёв и повторяемость трансформаций.</li>
-        <li><strong>Наблюдаемость с первого дня.</strong> Freshness/uniqueness тесты, алерты, трассировка.</li>
-        <li><strong>Версионирование и CI/CD.</strong> dbt-модели, GitHub Actions, ревью и промоут окружений.</li>
-        <li><strong>Стоимость владения.</strong> Минимум зоопарка, S3-совместимые стораджи, ClickHouse там, где это уместно.</li>
+        <li><strong>Данные → решения.</strong> Чёткие слои, повторяемые трансформации, минимальный TCO.</li>
+        <li><strong>Наблюдаемость.</strong> Freshness/uniqueness-тесты, алерты, трассировка.</li>
+        <li><strong>Версионирование.</strong> dbt, CI/CD, промоут окружений.</li>
+        <li><strong>Простота.</strong> Без зоопарка технологий — только то, что реально нужно.</li>
       </ul>
-    </section>
-
-    <section class="section">
-      <h2>Хобби и проекты</h2>
-      <ul>
-        <li>Контент-проект «Черновик реальности» — философски-ироничные наблюдения, международная аудитория.</li>
-        <li>Инвест-блог «Биржевой спекулянт» — дивидендная стратегия, разборы эмитентов.</li>
-        <li>Языки: прокачиваю китайский, иногда преподаю/помогаю с переводами (RU↔ZH↔JP).</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Технологии</h2>
-      <p>Python, SQL (Postgres, ClickHouse), Airflow/Prefect, Spark, dbt Core, Kafka/Redpanda, S3/MinIO, Docker, Metabase/Superset, GitHub Actions, Linux.</p>
     </section>
   </main>
 
@@ -73,7 +57,6 @@
       <a href="index.html" class="to-top">← На главную</a>
     </div>
   </footer>
-
   <script src="app.js"></script>
 </body>
 </html>
