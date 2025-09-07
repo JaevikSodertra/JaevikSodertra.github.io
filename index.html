@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artem Chernov — Data Engineer</title>
-  <meta name="description" content="Мидл дата-инженер: продакшн-ETL, стриминг, DWH, наблюдаемость. Проекты в логистике CN→RU и финтехе." />
+  <meta name="description" content="Мидл дата-инженер: ETL/ELT, стриминг, DWH, наблюдаемость. Проекты в логистике CN→RU и финтехе." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='22' ry='22' x='4' y='4' width='92' height='92' fill='%2300d4ff'/%3E%3Ctext x='50' y='62' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3EDE%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
@@ -30,7 +30,7 @@
           <li><a href="about.html">Обо мне</a></li>
           <li><a href="#skills">Навыки</a></li>
           <li><a href="#projects">Проекты</a></li>
-          <li><a href="#experience">Опыт</a></li>
+          <li><a href="#testimonials">Отзывы</a></li>
           <li><a href="#contact">Контакты</a></li>
           <li><button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌓</button></li>
         </ul>
@@ -39,11 +39,18 @@
     <div class="gradient"></div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO с видео-фоном -->
   <section class="hero container" id="top">
+    <div class="hero-media reveal">
+      <!-- публичный технологичный видеобэкграунд -->
+      <video class="hero-video" autoplay muted playsinline loop
+        src="https://cdn.coverr.co/videos/coverr-network-visualization-4046/1080p.mp4"></video>
+      <div class="hero-overlay"></div>
+    </div>
+
     <div class="hero-text reveal">
-      <h1>Data Engineer <span class="accent">с фокусом на логистику и финансы</span></h1>
-      <p>Строю надёжные конвейеры данных, DWH и стриминг, чтобы решения принимались по фактам. Люблю понятную архитектуру, наблюдаемость и быстрый time-to-value.</p>
+      <h1>Data Engineer <span class="accent">для логистики и финансов</span></h1>
+      <p>Строю надёжные ETL/ELT-пайплайны, DWH и стриминг. Делаю наблюдаемость и тесты качества «по умолчанию», чтобы данные служили решению задач бизнеса — от CN→RU логистики до дивидендной аналитики.</p>
       <div class="hero-cta">
         <a class="btn primary" href="#projects">Смотреть проекты</a>
         <a class="btn ghost" href="#contact">Связаться</a>
@@ -54,16 +61,13 @@
         <div><strong>Fin</strong><span>дивиденды, отчётность</span></div>
       </div>
     </div>
-    <div class="hero-media reveal">
-      <img src="https://images.unsplash.com/photo-1551281044-8d8d0d8b16a8?q=80&w=1400&auto=format&fit=crop" alt="Данные и инфраструктура" />
-    </div>
   </section>
 
   <!-- SKILLS -->
   <section class="section container" id="skills">
     <div class="section-header reveal">
       <h2>Технологии и подходы</h2>
-      <p>Инструменты, которыми пользуюсь ежедневно.</p>
+      <p>Инструменты и практики, которые использую каждый день.</p>
     </div>
     <div class="skills reveal">
       <span class="tag">Python</span>
@@ -81,104 +85,79 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS с hover и модальными окнами -->
   <section class="section container" id="projects">
     <div class="section-header reveal">
       <h2>Выбранные проекты</h2>
-      <p>Кейсы, близкие моему домену. Цифры — про эффективность и устойчивость.</p>
+      <p>Кейсы, близкие моему домену. В модалке — детали архитектуры и эффекта.</p>
     </div>
 
     <div class="grid">
-      <article class="project reveal">
+      <!-- Проект 1 -->
+      <article class="project reveal" data-modal="p1">
         <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop" alt="Логистический стриминг" />
         <div class="project-body">
           <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
-          <p>Ingestion статусов из китайских TMS/WMS (webhooks + polling), нормализация, дедупликация и доставка в DWH. SLA-мониторинг по плечам (сортировка, граница, доставка).</p>
-          <ul class="mini">
-            <li>Kafka + Debezium, Airflow, ClickHouse</li>
-            <li>Снижение «слепых зон» по статусам ~70%</li>
-            <li>−18% штрафов благодаря своевременным алертам</li>
-          </ul>
-          <a class="btn small" href="#" aria-disabled="true">Архитектура по запросу</a>
+          <p>Ingestion из TMS/WMS (webhooks+polling), нормализация, дедупликация, SLA-мониторинг.</p>
+          <button class="btn small">Подробнее</button>
         </div>
       </article>
 
-      <article class="project reveal">
+      <!-- Проект 2 -->
+      <article class="project reveal" data-modal="p2">
         <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop" alt="Стоимость перевозки" />
         <div class="project-body">
           <h3>Калькулятор полной логистической стоимости</h3>
-          <p>Витрина расходов: пошлины, СВХ, брокерские, утилизационный сбор, доп-работы. dbt-модели с версионированием и тестами качества.</p>
-          <ul class="mini">
-            <li>dbt Core, Postgres, DuckDB (dev)</li>
-            <li>Скорость расчёта — секунды, ошибок −40%</li>
-          </ul>
-          <a class="btn small" href="#" aria-disabled="true">Демо витрины</a>
+          <p>dbt-модели, витрины расходов (пошлина, СВХ, брокер, утилизационный сбор, доп-работы).</p>
+          <button class="btn small">Подробнее</button>
         </div>
       </article>
 
-      <article class="project reveal">
+      <!-- Проект 3 -->
+      <article class="project reveal" data-modal="p3">
         <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Дивидендная аналитика" />
         <div class="project-body">
           <h3>Дивидендная аналитика (RU рынок)</h3>
-          <p>ETL прайсов/календарей, нормализация МСФО/РСБУ, витрина по выплатам/реинвестам. Дашборды с DY, payout ratio и сезонностью.</p>
-          <ul class="mini">
-            <li>Airflow, Pandas, Parquet, Metabase</li>
-            <li>Автопостинг сводок в Telegram</li>
-          </ul>
-          <a class="btn small" href="#" aria-disabled="true">Скриншоты по запросу</a>
+          <p>ETL прайсов/календарей, нормализация МСФО/РСБУ, витрина выплат и реинвестов.</p>
+          <button class="btn small">Подробнее</button>
         </div>
       </article>
 
-      <article class="project reveal">
+      <!-- Проект 4 -->
+      <article class="project reveal" data-modal="p4">
         <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="DQ/Observability" />
         <div class="project-body">
           <h3>Наблюдаемость и качество данных</h3>
-          <p>SLI/SLA, freshness/uniqueness-тесты, алерты, trace-логирование. Настроены пороги, сезонные базовые линии.</p>
-          <ul class="mini">
-            <li>Great Expectations / Soda, Prometheus + Grafana</li>
-            <li>MTTR задач ↓ ~35%</li>
-          </ul>
-          <a class="btn small" href="#" aria-disabled="true">Скрины дашбордов</a>
+          <p>SLI/SLA, freshness/uniqueness-тесты, алерты, трассировка событий.</p>
+          <button class="btn small">Подробнее</button>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="section container" id="experience">
+  <!-- TESTIMONIALS -->
+  <section class="section container" id="testimonials">
     <div class="section-header reveal">
-      <h2>Опыт</h2>
-      <p>Крупные компании и кросс-функциональные команды (продукт + аналитика + IT).</p>
+      <h2>Отзывы</h2>
+      <p>Короткие цитаты от заказчиков и коллег.</p>
     </div>
 
-    <div class="timeline">
-      <div class="t-item reveal">
-        <div class="t-head"><strong>Data Engineer</strong> · Лид-логистический маркетплейс (RU)</div>
-        <div class="t-body">
-          <ul>
-            <li>Оркестрация ETL/ELT (Airflow), перенос SQL-скриптов в dbt, слой marts.</li>
-            <li>SLA по маршрутам CN→RU, дешёвое долговременное хранилище (S3-совместимое).</li>
-          </ul>
-        </div>
-      </div>
-      <div class="t-item reveal">
-        <div class="t-head"><strong>Data Engineer</strong> · Кросс-бордер автологистика (CN→RU)</div>
-        <div class="t-body">
-          <ul>
-            <li>Интеграции с TMS/WMS/CRM в Китае (API, webhooks), нормализация статусов.</li>
-            <li>Витрина затрат (пошлина, СВХ, брокер, оклейка, допы) для фин-блока.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="t-item reveal">
-        <div class="t-head"><strong>Data Engineer</strong> · Финтех/инвест-сервис</div>
-        <div class="t-body">
-          <ul>
-            <li>Календарь дивидендов и корпоративных действий, карточки эмитентов.</li>
-            <li>Дашборды для контент-канала, автопостинг.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="testimonials">
+      <figure class="quote reveal">
+        <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="avatar" />
+        <blockquote>«Сделал быстрее срока, метрики выросли сразу после релиза. Рекомендую!»</blockquote>
+        <figcaption>Инга П. · e-commerce</figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" alt="avatar" />
+        <blockquote>«Чёткая архитектура и документация. Поддерживать легко, инциденты редки.»</blockquote>
+        <figcaption>Антон К. · стартап</figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=400&auto=format&fit=crop" alt="avatar" />
+        <blockquote>«Пиксель-перфект и оптимизация. Витрины загружаются мгновенно.»</blockquote>
+        <figcaption>Вера Л. · маркетинг</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -186,7 +165,6 @@
   <section class="section container" id="contact">
     <div class="section-header reveal">
       <h2>Контакты</h2>
-      <p>Опишите кратко задачу и ожидания по срокам — предложу архитектуру и план.</p>
     </div>
 
     <div class="contact">
@@ -216,6 +194,56 @@
       <a href="#top" class="to-top" aria-label="Наверх">↑ Наверх</a>
     </div>
   </footer>
+
+  <!-- Модальные окна проектов -->
+  <div class="modal" id="p1" aria-hidden="true">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close>×</button>
+      <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
+      <p>Источники: китайские TMS/WMS (webhooks + периодический polling). Нормализация справочников, дедупликация по composite-key, маршрутизация в топики Kafka. Оркестрация в Airflow, слой <em>staging → marts</em> в ClickHouse.</p>
+      <ul>
+        <li>Снижение «слепых зон» по статусам ~70%</li>
+        <li>Алерты по SLA: −18% штрафов</li>
+        <li>Событие появлялось в аналитике через минуты</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="p2" aria-hidden="true">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close>×</button>
+      <h3>Калькулятор полной логистической стоимости</h3>
+      <p>dbt-модели с тестами и версионированием. Витрина учитывает пошлины, СВХ, брокераж, утилизацию, доп-работы (оклейка, дооснащение). Единые правила расчёта + журнал изменений.</p>
+      <ul>
+        <li>Ошибки в отчётности −40%</li>
+        <li>Время расчёта — секунды</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="p3" aria-hidden="true">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close>×</button>
+      <h3>Дивидендная аналитика (RU рынок)</h3>
+      <p>ETL календарей/прайсов, нормализация МСФО/РСБУ, расчёт DY, payout ratio, сезонности. Дашборды и автопостинг сводок.</p>
+      <ul>
+        <li>Airflow, Pandas, Parquet, Metabase</li>
+        <li>Телеграм-отчёты по расписанию</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="p4" aria-hidden="true">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close>×</button>
+      <h3>Наблюдаемость и качество данных</h3>
+      <p>SLI/SLA, freshness/uniqueness, пороговые алерты, trace-логирование. Бейзлайны по сезонности для снижения ложных тревог.</p>
+      <ul>
+        <li>Great Expectations / Soda, Prometheus + Grafana</li>
+        <li>MTTR ↓ ~35%</li>
+      </ul>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
