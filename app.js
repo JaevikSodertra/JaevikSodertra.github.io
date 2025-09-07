@@ -27,3 +27,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); navList?.classList.remove('open'); }
   });
 });
+
+// scroll-анимации через IntersectionObserver
+const items = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+items.forEach(el => io.observe(el));
