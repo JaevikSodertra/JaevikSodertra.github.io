@@ -77,6 +77,15 @@ p{margin:0 0 16px;max-width:70ch} ul,li{margin:0 0 8px 20px;padding:0}
 .section-header{margin-bottom:28px}
 .section-header p{color:var(--muted);margin:0}
 
+.about-photo{
+  width:200px;
+  height:auto;
+  max-width:100%;
+  border-radius:50%;
+  display:block;
+  margin:0 auto 24px;
+}
+
 /* Skills */
 .skills{display:flex;flex-wrap:wrap;gap:10px}
 .tag{padding:8px 12px;background:var(--panel);border:1px solid var(--border);border-radius:999px}
