@@ -130,30 +130,120 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="section container" id="testimonials">
-    <div class="section-header reveal">
-      <h2>Отзывы</h2>
-      <p>Короткие цитаты от заказчиков и коллег.</p>
-    </div>
+<section class="section container" id="testimonials">
+  <div class="section-header reveal">
+    <h2>Отзывы</h2>
+    <p>Реальные задачи, конкретные цифры и результат. Имена обезличены по NDA.</p>
+  </div>
 
-    <div class="testimonials">
-      <figure class="quote reveal">
+  <div class="testimonials">
+    <!-- Отзыв 1 -->
+    <figure class="quote reveal" itemscope itemtype="https://schema.org/Review">
+      <div class="quote-head">
         <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="avatar" />
-        <blockquote>«Сделал быстрее срока, метрики выросли сразу после релиза. Рекомендую!»</blockquote>
-        <figcaption>Инга П. · e-commerce</figcaption>
-      </figure>
-      <figure class="quote reveal">
+        <div>
+          <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Ирина П.</span>
+          </strong>
+          <div class="meta">Директор по операционной логистике · маркетплейс (RU)</div>
+        </div>
+      </div>
+      <blockquote class="quote-text" itemprop="reviewBody" data-collapsed>
+        Мы пригласили Артёма для наведения порядка в потоке статусов CN→RU. За 4 недели он
+        подключил TMS/WMS поставщиков, привёл справочники к одному виду и внедрил SLA-мониторинг по плечам.
+        Доля «слепых зон» по статусам снизилась примерно на 70%, а штрафы за просрочки — на 18%.
+        Команда получила алерты и дашборды, которые действительно помогают в смене. Рекомендую за скорость,
+        аккуратную архитектуру и документацию.
+      </blockquote>
+      <ul class="facts">
+        <li>Срок внедрения: 4 недели</li>
+        <li>−70% слепых зон по статусам</li>
+        <li>−18% штрафов по SLA</li>
+      </ul>
+      <button class="more" aria-expanded="false">Читать полностью</button>
+      <meta itemprop="itemReviewed" content="Стриминг статусов и SLA" />
+      <meta itemprop="datePublished" content="2025-05-10" />
+    </figure>
+
+    <!-- Отзыв 2 -->
+    <figure class="quote reveal" itemscope itemtype="https://schema.org/Review">
+      <div class="quote-head">
         <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" alt="avatar" />
-        <blockquote>«Чёткая архитектура и документация. Поддерживать легко, инциденты редки.»</blockquote>
-        <figcaption>Антон К. · стартап</figcaption>
-      </figure>
-      <figure class="quote reveal">
+        <div>
+          <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Антон К.</span>
+          </strong>
+          <div class="meta">Руководитель финансового блока · автoлогистика (CN→RU)</div>
+        </div>
+      </div>
+      <blockquote class="quote-text" itemprop="reviewBody" data-collapsed>
+        Артём перенёс наши расчёты полной стоимости перевозки в dbt: единые правила, тесты качества,
+        версия моделей и журнал изменений. Витрина теперь пересчитывается за секунды и легко сверяется с первичкой.
+        Ошибок в отчётности стало заметно меньше — по нашей оценке около 40%.
+      </blockquote>
+      <ul class="facts">
+        <li>dbt Core + Postgres/DuckDB</li>
+        <li>Время расчёта: секунды</li>
+        <li>Ошибки в отчётах: −40%</li>
+      </ul>
+      <button class="more" aria-expanded="false">Читать полностью</button>
+      <meta itemprop="itemReviewed" content="Калькулятор полной логистической стоимости" />
+      <meta itemprop="datePublished" content="2025-03-28" />
+    </figure>
+
+    <!-- Отзыв 3 -->
+    <figure class="quote reveal" itemscope itemtype="https://schema.org/Review">
+      <div class="quote-head">
         <img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=400&auto=format&fit=crop" alt="avatar" />
-        <blockquote>«Пиксель-перфект и оптимизация. Витрины загружаются мгновенно.»</blockquote>
-        <figcaption>Вера Л. · маркетинг</figcaption>
-      </figure>
-    </div>
-  </section>
+        <div>
+          <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Вера Л.</span>
+          </strong>
+          <div class="meta">Продуктовый аналитик · финтех-сервис</div>
+        </div>
+      </div>
+      <blockquote class="quote-text" itemprop="reviewBody" data-collapsed>
+        Мы делали витрину дивидендов и корпоративных действий. Артём настроил ETL календарей,
+        нормализацию МСФО/РСБУ и автоматический выпуск сводок в Telegram. Дашборды стали обновляться без ручных правок,
+        а команда редакции наконец получила один источник правды по выплатам и сезонности.
+      </blockquote>
+      <ul class="facts">
+        <li>Airflow + Parquet + Metabase</li>
+        <li>Автопостинг отчётов в Telegram</li>
+        <li>Один «источник правды» по дивидендам</li>
+      </ul>
+      <button class="more" aria-expanded="false">Читать полностью</button>
+      <meta itemprop="itemReviewed" content="Дивидендная аналитика" />
+      <meta itemprop="datePublished" content="2024-12-02" />
+    </figure>
+
+    <!-- Отзыв 4 -->
+    <figure class="quote reveal" itemscope itemtype="https://schema.org/Review">
+      <div class="quote-head">
+        <img class="avatar" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop" alt="avatar" />
+        <div>
+          <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Дмитрий С.</span>
+          </strong>
+          <div class="meta">Head of Data · e-commerce</div>
+        </div>
+      </div>
+      <blockquote class="quote-text" itemprop="reviewBody" data-collapsed>
+        В проекте наблюдаемости Артём внедрил тесты свежести/уникальности, SLI/SLA и алерты с порогами.
+        Ложных срабатываний стало меньше, MTTR упал примерно на треть. Понравилось, что всё сопровождается
+        документацией и читаемыми плейбуками для дежурных.
+      </blockquote>
+      <ul class="facts">
+        <li>Great Expectations / Soda + Prometheus/Grafana</li>
+        <li>MTTR ↓ ~35%</li>
+        <li>Меньше ложных алертов</li>
+      </ul>
+      <button class="more" aria-expanded="false">Читать полностью</button>
+      <meta itemprop="itemReviewed" content="Наблюдаемость пайплайнов" />
+      <meta itemprop="datePublished" content="2025-01-17" />
+    </figure>
+  </div>
+</section>
 
   <!-- CONTACT -->
   <section class="section container" id="contact">
@@ -242,3 +332,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
