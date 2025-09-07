@@ -333,9 +333,9 @@
   </footer>
 
   <!-- Модальные окна проектов -->
-  <div class="modal" id="p1" aria-hidden="true">
+  <div class="modal" id="p1" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal__dialog">
-      <button class="modal__close" data-close>×</button>
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
       <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
       <p>Источники: китайские TMS/WMS (webhooks + периодический polling). Нормализация справочников, дедупликация по composite-key, маршрутизация в топики Kafka. Оркестрация в Airflow, слой <em>staging → marts</em> в ClickHouse.</p>
       <ul>
@@ -346,9 +346,9 @@
     </div>
   </div>
 
-  <div class="modal" id="p2" aria-hidden="true">
+  <div class="modal" id="p2" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal__dialog">
-      <button class="modal__close" data-close>×</button>
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
       <h3>Калькулятор полной логистической стоимости</h3>
       <p>dbt-модели с тестами и версионированием. Витрина учитывает пошлины, СВХ, брокераж, утилизацию, доп-работы (оклейка, дооснащение). Единые правила расчёта + журнал изменений.</p>
       <ul>
@@ -358,9 +358,9 @@
     </div>
   </div>
 
-  <div class="modal" id="p3" aria-hidden="true">
+  <div class="modal" id="p3" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal__dialog">
-      <button class="modal__close" data-close>×</button>
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
       <h3>Дивидендная аналитика (RU рынок)</h3>
       <p>ETL календарей/прайсов, нормализация МСФО/РСБУ, расчёт DY, payout ratio, сезонности. Дашборды и автопостинг сводок.</p>
       <ul>
@@ -370,9 +370,9 @@
     </div>
   </div>
 
-  <div class="modal" id="p4" aria-hidden="true">
+  <div class="modal" id="p4" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal__dialog">
-      <button class="modal__close" data-close>×</button>
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
       <h3>Наблюдаемость и качество данных</h3>
       <p>SLI/SLA, freshness/uniqueness, пороговые алерты, trace-логирование. Бейзлайны по сезонности для снижения ложных тревог.</p>
       <ul>
