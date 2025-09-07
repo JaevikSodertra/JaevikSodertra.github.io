@@ -33,6 +33,18 @@
     "sameAs":["https://github.com/JaevikSodertra"]
   }
   </script>
+  <script>
+    if (location.search.includes('no-track')) {
+      localStorage.setItem('plausible_ignore', 'true');
+    }
+    if (!localStorage.getItem('plausible_ignore')) {
+      var s = document.createElement('script');
+      s.defer = true;
+      s.dataset.domain = 'jaeviksodertra.github.io';
+      s.src = 'https://plausible.example.com/js/script.js';
+      document.head.appendChild(s);
+    }
+  </script>
 </head>
 <body>
   <!-- HEADER -->
