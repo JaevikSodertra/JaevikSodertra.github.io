@@ -1,7 +1,8 @@
 // Тема
 const themeToggle = document.getElementById('themeToggle');
 const saved = localStorage.getItem('theme');
-if (saved) document.documentElement.setAttribute('data-theme', saved);
+const initial = saved ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+document.documentElement.setAttribute('data-theme', initial);
 themeToggle?.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', current);
