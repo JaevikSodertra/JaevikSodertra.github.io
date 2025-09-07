@@ -1,88 +1,36 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Обо мне — Artem Chernov</title>
-  <meta name="description" content="Мидл дата-инженер. Делаю устойчивые пайплайны, прозрачные модели и наблюдаемость «по умолчанию»." />
-  <meta property="og:title" content="Обо мне — Artem Chernov" />
-  <meta property="og:description" content="Мидл дата-инженер. Делаю устойчивые пайплайны, прозрачные модели и наблюдаемость «по умолчанию»." />
-  <meta property="og:url" content="https://jaeviksodertra.github.io/about.html" />
-  <meta property="og:image" content="https://jaeviksodertra.github.io/img/hero.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Обо мне — Artem Chernov" />
-  <meta name="twitter:description" content="Мидл дата-инженер. Делаю устойчивые пайплайны, прозрачные модели и наблюдаемость «по умолчанию»." />
-  <meta name="twitter:url" content="https://jaeviksodertra.github.io/about.html" />
-  <meta name="twitter:image" content="https://jaeviksodertra.github.io/img/hero.png" />
-  <link rel="canonical" href="https://jaeviksodertra.github.io/about.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    if (location.search.includes('no-track')) {
-      localStorage.setItem('plausible_ignore', 'true');
-    }
-    if (!localStorage.getItem('plausible_ignore')) {
-      var s = document.createElement('script');
-      s.defer = true;
-      s.dataset.domain = 'jaeviksodertra.github.io';
-      s.src = 'https://plausible.example.com/js/script.js';
-      document.head.appendChild(s);
-    }
-  </script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html"><span class="logo-dot"></span> Artem Chernov</a>
-      <nav aria-label="Навигация"><ul class="nav-list" id="mainNav">
-        <li><a href="index.html#projects">Проекты</a></li>
-        <li><a href="index.html#experience">Опыт</a></li>
-        <li><a href="index.html#contact">Контакты</a></li>
-      </ul></nav>
-    </div>
-    <div class="gradient"></div>
-  </header>
+---
+layout: default
+title: "Обо мне"
+description: "Мидл дата-инженер. Делаю устойчивые пайплайны, прозрачные модели и наблюдаемость «по умолчанию»."
+---
 
-  <main class="container section">
-    <div class="section-header">
-      <h2>Обо мне</h2>
-      <p>Мидл дата-инженер. Делаю устойчивые пайплайны, прозрачные модели и наблюдаемость «по умолчанию».</p>
-    </div>
+<div class="section-header">
+  <h2>Обо мне</h2>
+  <p>Мидл дата-инженер. Делаю устойчивые пайплайны, прозрачные модели и наблюдаемость «по умолчанию».</p>
+</div>
 
-    <div class="features">
-      <article class="card">
-        <h3>Фокус</h3>
-        <p>Логистика CN→RU (TMS/WMS/CRM интеграции, статусы и SLA), автоперевозки, e-commerce, финансовая аналитика (дивиденды/отчётность).</p>
-      </article>
-      <article class="card">
-        <h3>Инструменты</h3>
-        <p>Python, SQL (Postgres/ClickHouse), Airflow/Prefect, Spark, dbt Core, Kafka/Redpanda, S3/MinIO, Docker, Metabase/Superset, GitHub Actions, Linux.</p>
-      </article>
-      <article class="card">
-        <h3>Коммуникация</h3>
-        <p>RU / ZH / EN; умею связывать продукт, аналитику и технику. Документирую решения и держу SLA/SLI.</p>
-      </article>
-    </div>
+<div class="features">
+  <article class="card">
+    <h3>Фокус</h3>
+    <p>Логистика CN→RU (TMS/WMS/CRM интеграции, статусы и SLA), автоперевозки, e-commerce, финансовая аналитика (дивиденды/отчётность).</p>
+  </article>
+  <article class="card">
+    <h3>Инструменты</h3>
+    <p>Python, SQL (Postgres/ClickHouse), Airflow/Prefect, Spark, dbt Core, Kafka/Redpanda, S3/MinIO, Docker, Metabase/Superset, GitHub Actions, Linux.</p>
+  </article>
+  <article class="card">
+    <h3>Коммуникация</h3>
+    <p>RU / ZH / EN; умею связывать продукт, аналитику и технику. Документирую решения и держу SLA/SLI.</p>
+  </article>
+</div>
 
-    <section class="section">
-      <h2>Принципы</h2>
-      <ul>
-        <li><strong>Данные → решения.</strong> Чёткие слои, повторяемые трансформации, минимальный TCO.</li>
-        <li><strong>Наблюдаемость.</strong> Freshness/uniqueness-тесты, алерты, трассировка.</li>
-        <li><strong>Версионирование.</strong> dbt, CI/CD, промоут окружений.</li>
-        <li><strong>Простота.</strong> Без зоопарка технологий — только то, что реально нужно.</li>
-      </ul>
-    </section>
-  </main>
+<section class="section">
+  <h2>Принципы</h2>
+  <ul>
+    <li><strong>Данные → решения.</strong> Чёткие слои, повторяемые трансформации, минимальный TCO.</li>
+    <li><strong>Наблюдаемость.</strong> Freshness/uniqueness-тесты, алерты, трассировка.</li>
+    <li><strong>Версионирование.</strong> dbt, CI/CD, промоут окружений.</li>
+    <li><strong>Простота.</strong> Без зоопарка технологий — только то, что реально нужно.</li>
+  </ul>
+</section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Artem Chernov · Data Engineer</span>
-      <a href="index.html" class="to-top">← На главную</a>
-    </div>
-  </footer>
-  <script src="app.js" defer></script>
-</body>
-</html>
