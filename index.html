@@ -23,7 +23,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="На главную"><span class="logo-dot"></span> Artem Chernov</a>
+      <a class="logo" href="#top"><span class="logo-dot"></span> Artem Chernov</a>
       <nav class="nav" aria-label="Навигация">
         <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
         <ul class="nav-list">
@@ -39,34 +39,33 @@
     <div class="gradient"></div>
   </header>
 
-  <!-- HERO с видео-фоном -->
-<section class="hero" id="top">
-  <div class="container hero-inner">
-    <div class="hero-text reveal">
-      <h1>Data Engineer <span class="accent">с фокусом на логистику и финансы</span></h1>
-      <p>Строю надёжные ETL/ELT-пайплайны, DWH и стриминг. Делаю наблюдаемость и тесты качества «по умолчанию», чтобы данные служили решению задач бизнеса — от CN→RU логистики до дивидендной аналитики.</p>
-      <div class="hero-cta">
-        <a class="btn primary" href="#projects">Смотреть проекты</a>
-        <a class="btn ghost" href="#contact">Связаться</a>
-      </div>
-      <div class="stats">
-        <div><strong>2–3 года</strong><span>продакшн-опыта</span></div>
-        <div><strong>CN→RU</strong><span>логистика, автоперевозки</span></div>
-        <div><strong>Fin</strong><span>дивиденды, отчётность</span></div>
+  <!-- HERO: текст + фон-картинка на всю ширину -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <h1>Data Engineer <span class="accent">с фокусом на логистику и финансы</span></h1>
+        <p>Строю надёжные ETL/ELT-пайплайны, DWH и стриминг. Делаю наблюдаемость и тесты качества «по умолчанию», чтобы данные служили решению задач бизнеса — от CN→RU логистики до дивидендной аналитики.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">Смотреть проекты</a>
+          <a class="btn ghost" href="#contact">Связаться</a>
+        </div>
+        <div class="stats">
+          <div><strong>2–3 года</strong><span>продакшн-опыта</span></div>
+          <div><strong>CN→RU</strong><span>логистика, автоперевозки</span></div>
+          <div><strong>Fin</strong><span>дивиденды, отчётность</span></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="hero-bg">
-    <img src="img/hero.png" alt="Данные и инфраструктура" />
-  </div>
-</section>
-
+    <div class="hero-bg">
+      <img src="img/hero.png" alt="Данные и инфраструктура">
+    </div>
+  </section>
 
   <!-- SKILLS -->
   <section class="section container" id="skills">
     <div class="section-header reveal">
       <h2>Технологии и подходы</h2>
-      <p>Инструменты и практики, которые использую каждый день.</p>
+      <p>Инструменты и практики, которыми пользуюсь ежедневно.</p>
     </div>
     <div class="skills reveal">
       <span class="tag">Python</span>
@@ -84,7 +83,7 @@
     </div>
   </section>
 
-  <!-- PROJECTS с hover и модальными окнами -->
+  <!-- PROJECTS -->
   <section class="section container" id="projects">
     <div class="section-header reveal">
       <h2>Выбранные проекты</h2>
@@ -92,7 +91,6 @@
     </div>
 
     <div class="grid">
-      <!-- Проект 1 -->
       <article class="project reveal" data-modal="p1">
         <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop" alt="Логистический стриминг" />
         <div class="project-body">
@@ -102,7 +100,6 @@
         </div>
       </article>
 
-      <!-- Проект 2 -->
       <article class="project reveal" data-modal="p2">
         <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop" alt="Стоимость перевозки" />
         <div class="project-body">
@@ -112,7 +109,6 @@
         </div>
       </article>
 
-      <!-- Проект 3 -->
       <article class="project reveal" data-modal="p3">
         <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Дивидендная аналитика" />
         <div class="project-body">
@@ -122,7 +118,6 @@
         </div>
       </article>
 
-      <!-- Проект 4 -->
       <article class="project reveal" data-modal="p4">
         <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="DQ/Observability" />
         <div class="project-body">
@@ -247,4 +242,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
