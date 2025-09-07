@@ -1,39 +1,24 @@
----
----
 <!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artem Chernov — Data Engineer</title>
-  <meta name="description" content="Мидл дата-инженер: ETL/ELT, стриминг, DWH, наблюдаемость. Проекты в логистике CN→RU и финтехе." />
-  <meta property="og:title" content="Artem Chernov — Data Engineer" />
-  <meta property="og:description" content="Мидл дата-инженер: ETL/ELT, стриминг, DWH, наблюдаемость. Проекты в логистике CN→RU и финтехе." />
-  <meta property="og:url" content="https://jaeviksodertra.github.io/" />
-  <meta property="og:image" content="https://jaeviksodertra.github.io/img/hero.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Artem Chernov — Data Engineer" />
-  <meta name="twitter:description" content="Мидл дата-инженер: ETL/ELT, стриминг, DWH, наблюдаемость. Проекты в логистике CN→RU и финтехе." />
-  <meta name="twitter:url" content="https://jaeviksodertra.github.io/" />
-  <meta name="twitter:image" content="https://jaeviksodertra.github.io/img/hero.png" />
-  <link rel="canonical" href="https://jaeviksodertra.github.io/" />
+  <meta name="description" content="Data Engineer: ETL/ELT, стриминг, DWH, наблюдаемость. Логистика CN→RU и финансы." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='22' ry='22' x='4' y='4' width='92' height='92' fill='%2300d4ff'/%3E%3Ctext x='50' y='62' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3EDE%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- HEADER -->
+<body id="top">
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#top"><span class="logo-dot"></span> Artem Chernov</a>
       <nav class="nav" aria-label="Навигация">
-        <button class="nav-toggle" aria-label="Меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
-        <ul class="nav-list" id="mainNav">
+        <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-list">
           <li><a href="about.html">Обо мне</a></li>
           <li><a href="#skills">Навыки</a></li>
-          <li><a href="#experience">Опыт</a></li>
           <li><a href="#projects">Проекты</a></li>
           <li><a href="#testimonials">Отзывы</a></li>
           <li><a href="#contact">Контакты</a></li>
@@ -44,12 +29,12 @@
     <div class="gradient"></div>
   </header>
 
-  <!-- HERO: текст + фон-картинка на всю ширину -->
-  <section class="hero" id="top">
+  <!-- Hero (фон — локальное изображение) -->
+  <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text reveal">
         <h1>Data Engineer <span class="accent">с фокусом на логистику и финансы</span></h1>
-        <p>Строю надёжные ETL/ELT-пайплайны, DWH и стриминг. Делаю наблюдаемость и тесты качества «по умолчанию», чтобы данные служили решению задач бизнеса — от CN→RU логистики до дивидендной аналитики.</p>
+        <p>Строю надёжные ETL/ELT-пайплайны, DWH и стриминг. Наблюдаемость и тесты качества «по умолчанию», чтобы решения принимались по фактам.</p>
         <div class="hero-cta">
           <a class="btn primary" href="#projects">Смотреть проекты</a>
           <a class="btn ghost" href="#contact">Связаться</a>
@@ -62,11 +47,11 @@
       </div>
     </div>
     <div class="hero-bg">
-      <img src="img/hero.png" alt="Данные и инфраструктура">
+      <img src="img/hero.png" alt="Фоновое изображение: потоки данных" />
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- Skills -->
   <section class="section container" id="skills">
     <div class="section-header reveal">
       <h2>Технологии и подходы</h2>
@@ -88,254 +73,115 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- Projects (без модалок; минимум кликов) -->
   <section class="section container" id="projects">
     <div class="section-header reveal">
-      <h2>Выбранные проекты</h2>
-      <p>Кейсы, близкие моему домену. В модалке — детали архитектуры и эффекта.</p>
+      <h2>Проекты</h2>
+      <p>Коротко и по делу — архитектура и эффект.</p>
     </div>
 
     <div class="grid">
-      <article class="project reveal" data-modal="p1">
-        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop" alt="Логистический стриминг" />
+      <article class="project reveal">
+        <img src="img/p1.png" alt="Стриминг статусов CN→RU">
         <div class="project-body">
-          <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
-          <p>Собрали статусы грузов из китайских TMS/WMS и привели их к единому виду для SLA‑мониторинга. Дали бизнесу оперативную картину движения и сократили слепые зоны.</p>
-          <button class="btn small">Подробнее</button>
+          <h3>Стриминг CN→RU: статусы и SLA</h3>
+          <p>Подключили TMS/WMS, нормализовали статусы, SLA-мониторинг. ↓ слепых зон ≈70%, ↓ штрафов 18%.</p>
+          <a class="btn small" href="about.html#p1">Подробнее</a>
         </div>
       </article>
 
-      <article class="project reveal" data-modal="p2">
-        <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop" alt="Стоимость перевозки" />
+      <article class="project reveal">
+        <img src="img/p2.png" alt="Калькулятор логистической стоимости">
         <div class="project-body">
-          <h3>Калькулятор полной логистической стоимости</h3>
-          <p>Собрали в dbt расчёт полной логистической стоимости с учётом пошлин, СВХ и допработ. Результат — единая витрина расходов и быстрый расчёт без ручных ошибок.</p>
-          <button class="btn small">Подробнее</button>
+          <h3>Полная логистическая стоимость</h3>
+          <p>dbt-правила и тесты, единая витрина расходов. Рассчёт — секунды, ошибок меньше ≈40%.</p>
+          <a class="btn small" href="about.html#p2">Подробнее</a>
         </div>
       </article>
 
-      <article class="project reveal" data-modal="p3">
-        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Дивидендная аналитика" />
+      <article class="project reveal">
+        <img src="img/p3.png" alt="Дивидендная аналитика">
         <div class="project-body">
-          <h3>Дивидендная аналитика (RU рынок)</h3>
-          <p>Автоматизировали ETL прайсов и календарей, привели отчётность МСФО/РСБУ к единому виду. Витрина выплат и реинвестов формируется за минуты вместо часов.</p>
-          <button class="btn small">Подробнее</button>
+          <h3>Дивидендная аналитика</h3>
+          <p>ETL календарей/прайсов, нормализация МСФО/РСБУ, телеграм-сводки. Один источник правды.</p>
+          <a class="btn small" href="about.html#p3">Подробнее</a>
         </div>
       </article>
 
-      <article class="project reveal" data-modal="p4">
-        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="DQ/Observability" />
+      <article class="project reveal">
+        <img src="img/p4.png" alt="Наблюдаемость данных">
         <div class="project-body">
-          <h3>Наблюдаемость и качество данных</h3>
-          <p>Внедрили SLI/SLA, тесты свежести и уникальности, пороговые алерты и трассировку. Это сократило MTTR и снизило число ложных тревог.</p>
-          <button class="btn small">Подробнее</button>
+          <h3>Наблюдаемость и качество</h3>
+          <p>SLI/SLA, freshness/uniqueness, алерты. MTTR ↓ ~35%, меньше ложных тревог.</p>
+          <a class="btn small" href="about.html#p4">Подробнее</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section container">
-    <div class="section-header reveal">
-      <h2>Опыт</h2>
-      <p>Ключевые вехи и проекты.</p>
-    </div>
-    <div class="timeline">
-      <article class="t-item reveal">
-        <div class="t-head">2024 — Наблюдаемость и качество данных</div>
-        <div class="t-body">
-          <ul>
-            <li>Внедрение SLI/SLA, тестов свежести и алертов</li>
-          </ul>
-        </div>
-      </article>
-      <article class="t-item reveal">
-        <div class="t-head">2023 — Стриминг CN→RU</div>
-        <div class="t-body">
-          <ul>
-            <li>Мониторинг статусов грузов в режиме реального времени</li>
-          </ul>
-        </div>
-      </article>
-      <article class="t-item reveal">
-        <div class="t-head">2022 — Калькулятор логистической стоимости</div>
-        <div class="t-body">
-          <ul>
-            <li>dbt-модели и витрины расходов</li>
-          </ul>
-        </div>
-      </article>
-      <article class="t-item reveal">
-        <div class="t-head">2021 — Дивидендная аналитика</div>
-        <div class="t-body">
-          <ul>
-            <li>ETL прайсов и автоматизированные дашборды</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
+  <!-- Testimonials (упрощённые, без логотипов/кнопок) -->
   <section class="section container" id="testimonials">
     <div class="section-header reveal">
       <h2>Отзывы</h2>
-      <p>Реальные задачи, конкретные цифры и результат. Имена обезличены по NDA.</p>
+      <p>С фокусом на контекст и метрики. Имена обезличены по NDA.</p>
     </div>
 
     <div class="testimonials">
-    <!-- Отзыв 1 -->
-    <figure class="quote reveal" itemscope itemtype="https://schema.org/Review">
-      <div class="quote-head">
-        <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="Фото Ирины П." />
-        <div>
-          <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Ирина П.</span>
-          </strong>
-          <div class="meta">Директор по операционной логистике · маркетплейс (RU)</div>
-        </div>
-      </div>
-      <blockquote class="quote-text" itemprop="reviewBody" data-collapsed>
-        Мы пригласили Артёма для наведения порядка в потоке статусов CN→RU. За 4 недели он
-        подключил TMS/WMS поставщиков, привёл справочники к одному виду и внедрил SLA-мониторинг по плечам.
-        Доля «слепых зон» по статусам снизилась примерно на 70%, а штрафы за просрочки — на 18%.
-        Команда получила алерты и дашборды, которые действительно помогают в смене. Рекомендую за скорость,
-        аккуратную архитектуру и документацию.
-      </blockquote>
-      <ul class="facts">
-        <li>Срок внедрения: 4 недели</li>
-        <li>−70% слепых зон по статусам</li>
-        <li>−18% штрафов по SLA</li>
-      </ul>
-      <button class="more" aria-expanded="false">Читать полностью</button>
-      <meta itemprop="itemReviewed" content="Стриминг статусов и SLA" />
-      <meta itemprop="datePublished" content="2025-05-10" />
-    </figure>
+      <figure class="quote reveal">
+        <img class="avatar" src="img/ava1.jpg" alt="">
+        <blockquote class="quote-text">
+          «За 4 недели Артём подключил наши TMS/WMS и навёл порядок в статусах. Слепые зоны по маршрутам заметно сократились,
+          а штрафы за просрочки снизились. Дашборды и алерты реально помогают в смене.»
+        </blockquote>
+        <figcaption class="meta">Директор по операционной логистике · маркетплейс (RU)</figcaption>
+      </figure>
 
-    <!-- Отзыв 2 -->
-    <figure class="quote reveal" itemscope itemtype="https://schema.org/Review">
-      <div class="quote-head">
-        <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" alt="Фото Антона К." />
-        <div>
-          <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Антон К.</span>
-          </strong>
-          <div class="meta">Руководитель финансового блока · автoлогистика (CN→RU)</div>
-        </div>
-      </div>
-      <blockquote class="quote-text" itemprop="reviewBody" data-collapsed>
-        Артём перенёс наши расчёты полной стоимости перевозки в dbt: единые правила, тесты качества,
-        версия моделей и журнал изменений. Витрина теперь пересчитывается за секунды и легко сверяется с первичкой.
-        Ошибок в отчётности стало заметно меньше — по нашей оценке около 40%.
-      </blockquote>
-      <ul class="facts">
-        <li>dbt Core + Postgres/DuckDB</li>
-        <li>Время расчёта: секунды</li>
-        <li>Ошибки в отчётах: −40%</li>
-      </ul>
-      <button class="more" aria-expanded="false">Читать полностью</button>
-      <meta itemprop="itemReviewed" content="Калькулятор полной логистической стоимости" />
-      <meta itemprop="datePublished" content="2025-03-28" />
-    </figure>
+      <figure class="quote reveal">
+        <img class="avatar" src="img/ava2.jpg" alt="">
+        <blockquote class="quote-text">
+          «Перенёс расчёты полной стоимости в dbt с тестами и версионированием. Теперь считаем быстро и прозрачно,
+          ошибки в отчётности сократились примерно на 40%.»
+        </blockquote>
+        <figcaption class="meta">Руководитель финблока · автологистика (CN→RU)</figcaption>
+      </figure>
 
-    <!-- Отзыв 3 -->
-    <figure class="quote reveal" itemscope itemtype="https://schema.org/Review">
-      <div class="quote-head">
-        <img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=400&auto=format&fit=crop" alt="Фото Веры Л." />
-        <div>
-          <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Вера Л.</span>
-          </strong>
-          <div class="meta">Продуктовый аналитик · финтех-сервис</div>
-        </div>
-      </div>
-      <blockquote class="quote-text" itemprop="reviewBody" data-collapsed>
-        Мы делали витрину дивидендов и корпоративных действий. Артём настроил ETL календарей,
-        нормализацию МСФО/РСБУ и автоматический выпуск сводок в Telegram. Дашборды стали обновляться без ручных правок,
-        а команда редакции наконец получила один источник правды по выплатам и сезонности.
-      </blockquote>
-      <ul class="facts">
-        <li>Airflow + Parquet + Metabase</li>
-        <li>Автопостинг отчётов в Telegram</li>
-        <li>Один «источник правды» по дивидендам</li>
-      </ul>
-      <button class="more" aria-expanded="false">Читать полностью</button>
-      <meta itemprop="itemReviewed" content="Дивидендная аналитика" />
-      <meta itemprop="datePublished" content="2024-12-02" />
-    </figure>
+      <figure class="quote reveal">
+        <img class="avatar" src="img/ava3.jpg" alt="">
+        <blockquote class="quote-text">
+          «Витрина дивидендов перестала требовать ручных правок, отчёты уходят автоматически. Наконец-то один источник правды.»
+        </blockquote>
+        <figcaption class="meta">Продуктовый аналитик · финтех-сервис</figcaption>
+      </figure>
+    </div>
+  </section>
 
-    <!-- Отзыв 4 -->
-    <figure class="quote reveal" itemscope itemtype="https://schema.org/Review">
-      <div class="quote-head">
-        <img class="avatar" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop" alt="Фото Дмитрия С." />
-        <div>
-          <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Дмитрий С.</span>
-          </strong>
-          <div class="meta">Head of Data · e-commerce</div>
-        </div>
-      </div>
-      <blockquote class="quote-text" itemprop="reviewBody" data-collapsed>
-        В проекте наблюдаемости Артём внедрил тесты свежести/уникальности, SLI/SLA и алерты с порогами.
-        Ложных срабатываний стало меньше, MTTR упал примерно на треть. Понравилось, что всё сопровождается
-        документацией и читаемыми плейбуками для дежурных.
-      </blockquote>
-      <ul class="facts">
-        <li>Great Expectations / Soda + Prometheus/Grafana</li>
-        <li>MTTR ↓ ~35%</li>
-        <li>Меньше ложных алертов</li>
-      </ul>
-      <button class="more" aria-expanded="false">Читать полностью</button>
-      <meta itemprop="itemReviewed" content="Наблюдаемость пайплайнов" />
-      <meta itemprop="datePublished" content="2025-01-17" />
-    </figure>
-  </div>
-</section>
-
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section class="section container" id="contact">
     <div class="section-header reveal">
       <h2>Контакты</h2>
+      <p>Кратко опишите задачу — вернусь с вопросами и предложением подхода.</p>
     </div>
 
     <div class="contact">
       <div class="contact-card reveal">
         <h3>Открыт к сотрудничеству</h3>
-        <p>Домены: логистика/склады, финансы/отчётность, контент-аналитика. Форматы — консалтинг, разработка, поддержка.</p>
+        <p>Логистика/склады, финансы/отчётность, контент-аналитика. Форматы — консалтинг, разработка, поддержка.</p>
         <div class="contact-actions">
-          <a class="btn primary" href="mailto:83803087+JaevikSodertra@users.noreply.github.com">83803087+JaevikSodertra@users.noreply.github.com</a>
-          <a class="btn ghost" href="https://github.com/JaevikSodertra" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn primary" href="mailto:83803087+JaevikSodertra@users.noreply.github.com">Написать на email</a>
+          <a class="btn ghost" href="https://github.com/JaevikSodertra" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <p class="form-note">Языки: RU / ZH / EN / JP (базово).</p>
       </div>
 
       <form class="contact-form reveal" action="https://formspree.io/f/mwkgebkn" method="POST">
         <label>Ваше имя <input required name="name" placeholder="Иван" /></label>
         <label>Email <input type="email" required name="email" placeholder="name@mail.com" /></label>
-        <label>Сообщение <textarea required name="message" rows="4" placeholder="Нужно собрать витрину логистических затрат..." ></textarea></label>
+        <label>Сообщение <textarea required name="message" rows="4" placeholder="Опишите задачу..." ></textarea></label>
         <button class="btn primary" type="submit">Отправить</button>
-        <p class="form-note">* Для продакшн-формы позже подключим Formspree / любой бэкенд.</p>
-        <p class="form-status" hidden></p>
       </form>
     </div>
   </section>
 
-  <!-- LATEST POSTS -->
-  <section class="section container" id="latest-posts">
-    <div class="section-header reveal">
-      <h2>Последние записи</h2>
-    </div>
-    <ul class="latest-posts">
-      {% assign posts = site.pages | where_exp: 'p', "p.path contains 'posts/'" | sort: 'date' | reverse %}
-      {% for post in posts limit: 3 %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a> <span>{{ post.date | date: "%d.%m.%Y" }}</span></li>
-      {% endfor %}
-    </ul>
-    <div class="latest-links">
-      <a href="/blog.html">Все записи</a> · <a href="/feed.xml">RSS</a>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© <span id="year"></span> Artem Chernov · Data Engineer</span>
@@ -343,59 +189,6 @@
     </div>
   </footer>
 
-  <!-- Модальные окна проектов -->
-  <div class="modal" id="p1" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal__dialog">
-      <button class="modal__close" data-close aria-label="Закрыть">×</button>
-      <h3>Стриминг CN→RU: статусы грузов и SLA</h3>
-      <p>Источники: китайские TMS/WMS (webhooks + периодический polling). Нормализация справочников, дедупликация по composite-key, маршрутизация в топики Kafka. Оркестрация в Airflow, слой <em>staging → marts</em> в ClickHouse.</p>
-      <ul class="metrics">
-        <li>Снижение «слепых зон» по статусам ~70%</li>
-        <li>Алерты по SLA: −18% штрафов</li>
-        <li>Событие появлялось в аналитике через минуты</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="modal" id="p2" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal__dialog">
-      <button class="modal__close" data-close aria-label="Закрыть">×</button>
-      <h3>Калькулятор полной логистической стоимости</h3>
-      <p>dbt-модели с тестами и версионированием. Витрина учитывает пошлины, СВХ, брокераж, утилизацию, доп-работы (оклейка, дооснащение). Единые правила расчёта + журнал изменений.</p>
-      <ul class="metrics">
-        <li>Ошибки в отчётности −40%</li>
-        <li>Время расчёта — секунды</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="modal" id="p3" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal__dialog">
-      <button class="modal__close" data-close aria-label="Закрыть">×</button>
-      <h3>Дивидендная аналитика (RU рынок)</h3>
-      <p>ETL календарей и прайсов в Airflow, нормализация МСФО/РСБУ, расчёт DY, payout ratio и сезонности. Дашборды в Metabase и автопостинг сводок в Telegram.</p>
-      <ul class="metrics">
-        <li>Время подготовки отчётов ↓ с 2 ч до 15 мин</li>
-        <li>Погрешность расчётов <1%</li>
-        <li>Покрытие рынка дивидендов >95%</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="modal" id="p4" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal__dialog">
-      <button class="modal__close" data-close aria-label="Закрыть">×</button>
-      <h3>Наблюдаемость и качество данных</h3>
-      <p>SLI/SLA, тесты свежести и уникальности, пороговые алерты и trace-логирование. Стек: Great Expectations, Soda, Prometheus, Grafana. Бейзлайны по сезонности для снижения ложных тревог.</p>
-      <ul class="metrics">
-        <li>MTTR ↓ ~35%</li>
-        <li>Ложные алерты −50%</li>
-        <li>Покрытие критичных пайплайнов 100%</li>
-      </ul>
-    </div>
-  </div>
-
   <script src="app.js" defer></script>
 </body>
 </html>
-
