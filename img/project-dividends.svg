@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Иконка проекта дивидендной аналитики</title>
+  <desc id="desc">Столбчатый график с растущей стрелкой и монетами</desc>
+  <g fill="none" stroke="#1b2f45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="10" y="30" width="10" height="20" rx="2" fill="#f1f7ff" />
+    <rect x="24" y="22" width="10" height="28" rx="2" fill="#f1f7ff" />
+    <rect x="38" y="16" width="10" height="34" rx="2" fill="#f1f7ff" />
+    <path d="M10 50h38" />
+    <path d="M12 36l12 -10 10 8 14 -16" />
+    <path d="M44 18h10M54 18l-4 -4M54 18l-4 4" />
+    <circle cx="22" cy="52" r="4" fill="#e6f4ff" />
+    <circle cx="34" cy="52" r="4" fill="#e6f4ff" />
+    <path d="M22 50v4m-2 -2h4" />
+    <path d="M34 50v4m-2 -2h4" />
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Аватар для руководителя финблока</title>
+  <desc id="desc">Силуэт человека на холодном фоне с галстуком</desc>
+  <g fill="none" stroke="#1b2f45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="26" fill="#e3f1ff" />
+    <circle cx="32" cy="23" r="8" fill="#ffffff" />
+    <path d="M22 46c3 -6 17 -6 20 0l-4 8h-12z" fill="#ffffff" />
+    <path d="M32 34l-3 6 3 2 3 -2z" fill="#ffffff" />
+  </g>
+</svg>
