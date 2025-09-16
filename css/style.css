@@ -77,6 +77,22 @@ p{margin:0 0 16px;max-width:70ch} ul,li{margin:0 0 8px 20px;padding:0}
 .section-header{margin-bottom:28px}
 .section-header p{color:var(--muted);margin:0}
 
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  align-items:stretch;
+}
+
+.card{
+  padding:18px;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--panel);
+  backdrop-filter:blur(8px);
+  box-shadow:var(--shadow);
+}
+
 .about-photo{
   width:200px;
   height:auto;
