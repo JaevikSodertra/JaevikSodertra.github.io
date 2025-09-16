@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dividend analytics illustration</title>
+  <desc id="desc">Layered dashboards, tickers and graphs reflecting financial analytics for dividends.</desc>
+  <defs>
+    <linearGradient id="bgDiv" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071725" />
+      <stop offset="1" stop-color="#102e3f" />
+    </linearGradient>
+    <linearGradient id="cardTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d4ff" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#7c4dff" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="cardMid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d2338" />
+      <stop offset="1" stop-color="#081829" />
+    </linearGradient>
+    <linearGradient id="graphLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00d4ff" />
+      <stop offset="1" stop-color="#7c4dff" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#bgDiv)" />
+
+  <g opacity="0.35">
+    <circle cx="200" cy="160" r="160" fill="#00d4ff" fill-opacity="0.18" />
+    <circle cx="720" cy="180" r="180" fill="#7c4dff" fill-opacity="0.16" />
+    <circle cx="480" cy="460" r="200" fill="#00c2ff" fill-opacity="0.18" />
+  </g>
+
+  <g opacity="0.9">
+    <rect x="200" y="180" width="520" height="280" rx="26" fill="url(#cardMid)" stroke="#143247" stroke-width="2" />
+    <rect x="240" y="220" width="440" height="100" rx="20" fill="#0b2132" stroke="#1d3d53" stroke-width="1.5" />
+    <rect x="240" y="340" width="440" height="80" rx="18" fill="#0b2132" stroke="#1d3d53" stroke-width="1.5" />
+    <rect x="320" y="120" width="320" height="70" rx="20" fill="url(#cardTop)" opacity="0.85" />
+  </g>
+
+  <g fill="none" stroke="url(#graphLine)" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <path d="M270 360 L330 330 L390 370 L430 340 L470 360 L520 320 L580 350 L620 330 L660 345" />
+  </g>
+
+  <g opacity="0.6" stroke="#00d4ff" stroke-width="3" stroke-linecap="round">
+    <path d="M280 260 L330 235 L380 250 L430 220 L480 245 L530 230 L580 255 L630 240 L680 265" />
+  </g>
+
+  <g opacity="0.5" stroke="#7c4dff" stroke-width="3" stroke-linecap="round">
+    <path d="M280 395 L340 412 L400 388 L460 408 L520 386 L580 400 L640 390" />
+  </g>
+
+  <g fill="#00d4ff" opacity="0.7">
+    <circle cx="280" cy="260" r="6" />
+    <circle cx="330" cy="235" r="6" />
+    <circle cx="380" cy="250" r="6" />
+    <circle cx="430" cy="220" r="6" />
+    <circle cx="480" cy="245" r="6" />
+    <circle cx="530" cy="230" r="6" />
+    <circle cx="580" cy="255" r="6" />
+    <circle cx="630" cy="240" r="6" />
+    <circle cx="680" cy="265" r="6" />
+  </g>
+
+  <g fill="#7c4dff" opacity="0.65">
+    <circle cx="280" cy="395" r="5" />
+    <circle cx="340" cy="412" r="5" />
+    <circle cx="400" cy="388" r="5" />
+    <circle cx="460" cy="408" r="5" />
+    <circle cx="520" cy="386" r="5" />
+    <circle cx="580" cy="400" r="5" />
+    <circle cx="640" cy="390" r="5" />
+  </g>
+
+  <g opacity="0.5" fill="none" stroke="#1f4863" stroke-width="2" stroke-dasharray="12 10">
+    <path d="M200 420 H720" />
+    <path d="M200 300 H720" />
+    <path d="M240 220 V460" />
+    <path d="M680 220 V460" />
+  </g>
+</svg>
