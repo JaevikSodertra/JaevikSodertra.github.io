@@ -79,6 +79,7 @@ const contactForm = document.querySelector('.contact-form');
 contactForm?.addEventListener('submit', async (e) => {
   e.preventDefault();
   const statusEl = contactForm.querySelector('.form-status');
+  if (!statusEl) return;
   statusEl.hidden = true;
   const data = new FormData(contactForm);
   try {
