@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Иконка проекта стриминга статусов</title>
-  <desc id="desc">Соединённые узлы с направленным потоком из Китая в Россию</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="project-streaming-title project-streaming-desc">
+  <title id="project-streaming-title">Иконка проекта стриминга статусов</title>
+  <desc id="project-streaming-desc">Поток данных между двумя узлами с отметкой маршрута</desc>
   <g fill="none" stroke="#1b2f45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="6" y="22" width="18" height="16" rx="3.5" fill="#f4f8fc" />
-    <rect x="40" y="22" width="18" height="16" rx="3.5" fill="#f4f8fc" />
-    <path d="M24 30h12" />
-    <path d="M35 26l7 4 -7 4z" fill="#1b2f45" stroke="#1b2f45" />
-    <circle cx="32" cy="30" r="3" fill="#1b2f45" />
-    <path d="M12 27h9M12 32h9" />
-    <path d="M46 27h6M46 32h6" />
-    <path d="M22 17a14 14 0 0 1 20 0" />
-    <path d="M42 43a14 14 0 0 1 -20 0" />
-    <path d="M18 44l-8 8" />
-    <path d="M46 20l8 -8" />
+    <rect x="6" y="16" width="52" height="32" rx="9" fill="#f2f6fb" />
+    <rect x="12" y="22" width="10" height="20" rx="3" fill="#ffffff" />
+    <rect x="42" y="22" width="10" height="20" rx="3" fill="#ffffff" />
+    <path d="M22 32h12" />
+    <path d="M34 27l10 5-10 5z" fill="#1b2f45" stroke="#1b2f45" />
+    <circle cx="18" cy="24" r="3" fill="#e1ecfb" />
+    <circle cx="48" cy="36" r="3" fill="#e1ecfb" />
+    <path d="M14 24h-4m0 16h6" />
+    <path d="M50 24h4m0 16h-6" />
+    <path d="M16 18a24 24 0 0 1 32 0" />
+    <path d="M16 46a24 24 0 0 0 32 0" />
   </g>
 </svg>

@@ -1,14 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Иконка проекта наблюдаемости</title>
-  <desc id="desc">Радар с индикатором и контурами сигналов</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="project-observability-title project-observability-desc">
+  <title id="project-observability-title">Иконка проекта наблюдаемости</title>
+  <desc id="project-observability-desc">Радар с индикатором и контрольными дугами</desc>
   <g fill="none" stroke="#1b2f45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="32" cy="32" r="22" fill="#f3f7fb" />
+    <circle cx="32" cy="32" r="22" fill="#f0f5fc" />
     <circle cx="32" cy="32" r="10" />
     <path d="M32 20v-6m0 36v-6" />
     <path d="M20 32h-6m36 0h-6" />
-    <path d="M32 32l10 -6" />
-    <circle cx="42" cy="26" r="3" fill="#1b2f45" />
-    <path d="M16 18a22 22 0 0 1 28 -4M20 46a22 22 0 0 0 28 -4" />
-    <path d="M14 50h12l-3 8m20 -8h12l-3 8" />
+    <path d="M32 32l12 -7" />
+    <circle cx="44" cy="25" r="3.5" fill="#1b2f45" />
+    <path d="M16 18a24 24 0 0 1 32 0" />
+    <path d="M16 46a24 24 0 0 0 32 0" />
+    <path d="M14 50h14l-3 8m18 -8h14l-3 8" />
   </g>
 </svg>

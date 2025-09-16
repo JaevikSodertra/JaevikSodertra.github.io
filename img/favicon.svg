@@ -1,12 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect x="8" y="8" width="84" height="84" rx="20" fill="#f3f7fb" stroke="#1b2f45" stroke-width="6" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="favicon-title favicon-desc">
+  <title id="favicon-title">Favicon: схема потоков данных</title>
+  <desc id="favicon-desc">Соединённые узлы в виде диаграммы с направленной стрелкой</desc>
+  <rect x="8" y="8" width="84" height="84" rx="20" fill="#f2f6fb" stroke="#1b2f45" stroke-width="6" />
   <g fill="none" stroke="#1b2f45" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M28 36h24l8 12 12 -12" />
-    <path d="M28 64h44" />
+    <path d="M26 36h26l10 14 12 -14" />
+    <path d="M26 68h48" />
   </g>
-  <circle cx="28" cy="36" r="5" fill="#1b2f45" />
-  <circle cx="60" cy="48" r="5" fill="#1b2f45" />
-  <circle cx="84" cy="36" r="5" fill="#1b2f45" />
-  <circle cx="28" cy="64" r="5" fill="#1b2f45" />
-  <circle cx="72" cy="64" r="5" fill="#1b2f45" />
+  <g fill="#1b2f45">
+    <circle cx="26" cy="36" r="5" />
+    <circle cx="52" cy="50" r="5" />
+    <circle cx="74" cy="36" r="5" />
+    <circle cx="26" cy="68" r="5" />
+    <circle cx="74" cy="68" r="5" />
+  </g>
 </svg>

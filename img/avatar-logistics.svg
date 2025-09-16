@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Аватар для директора по операционной логистике</title>
-  <desc id="desc">Силуэт человека на фоне тёплого круга</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="avatar-logistics-title avatar-logistics-desc">
+  <title id="avatar-logistics-title">Аватар для директора по операционной логистике</title>
+  <desc id="avatar-logistics-desc">Силуэт человека с маршрутной стрелкой на тёплом фоне</desc>
   <g fill="none" stroke="#1b2f45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="32" cy="32" r="26" fill="#fdf4d9" />
+    <circle cx="32" cy="32" r="26" fill="#fdf1dd" />
     <circle cx="32" cy="24" r="8" fill="#ffffff" />
     <path d="M20 46a12 12 0 0 1 24 0v6H20z" fill="#ffffff" />
+    <path d="M20 52l-6 4" />
+    <path d="M44 52l6 4" />
+    <path d="M18 34h10l4 -4 6 6 8 -4" />
+    <path d="M46 32l4 2-4 2z" fill="#1b2f45" stroke="#1b2f45" />
   </g>
 </svg>

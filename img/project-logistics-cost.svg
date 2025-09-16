@@ -1,12 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Иконка проекта полной логистической стоимости</title>
-  <desc id="desc">Документ с метками стоимости и монетой</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="project-logistics-cost-title project-logistics-cost-desc">
+  <title id="project-logistics-cost-title">Иконка проекта полной логистической стоимости</title>
+  <desc id="project-logistics-cost-desc">Документ с метками стоимости и монетой</desc>
   <g fill="none" stroke="#1b2f45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 10h18l12 12v26a10 10 0 0 1 -10 10H22a10 10 0 0 1 -10 -10V20a10 10 0 0 1 10 -10z" fill="#f5f8fc" />
-    <path d="M40 10v12h12" />
-    <path d="M20 28h16M20 36h10" />
-    <circle cx="40" cy="44" r="10" fill="#e2f0ff" />
-    <path d="M40 37v14m-5 -6h7a3.5 3.5 0 0 0 0 -7h-5" />
-    <path d="M26 46h-8l4 6" />
+    <path d="M20 8h20l12 12v26a12 12 0 0 1 -12 12H20a12 12 0 0 1 -12 -12V20a12 12 0 0 1 12 -12z" fill="#f3f6fb" />
+    <path d="M40 8v12h12" />
+    <path d="M20 26h16M20 34h12" />
+    <path d="M20 42h12" stroke-dasharray="4 4" />
+    <circle cx="42" cy="46" r="10" fill="#e2efff" />
+    <path d="M42 38v16m-6 -6h8a3.5 3.5 0 0 0 0 -7h-5" />
+    <path d="M24 52l-6 4" />
+    <path d="M28 52l6 4" />
   </g>
 </svg>
