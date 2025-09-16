@@ -7,6 +7,7 @@
   const primaryNav = document.querySelector('.primary-nav');
   const header = document.querySelector('.site-header');
   const navBackdrop = document.querySelector('.nav-backdrop');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   const getStoredTheme = () => {
     try {
@@ -90,13 +91,111 @@
     link.addEventListener('click', () => closeNav());
   });
 
+  let scrollFocusTimeout;
+  const focusAfterScroll = (element) => {
+    if (!(element instanceof HTMLElement)) {
+      return;
+    }
+
+    const hadTabIndex = element.hasAttribute('tabindex');
+    if (!hadTabIndex) {
+      element.setAttribute('tabindex', '-1');
+    }
+
+    try {
+      element.focus({ preventScroll: true });
+    } catch (error) {
+      element.focus();
+    }
+
+    if (!hadTabIndex) {
+      element.addEventListener(
+        'blur',
+        () => {
+          element.removeAttribute('tabindex');
+        },
+        { once: true }
+      );
+    }
+  };
+
+  const smoothScrollTo = (target, options = {}) => {
+    if (!(target instanceof HTMLElement)) {
+      return;
+    }
+
+    const { instant = false } = options;
+    const headerOffset = header?.offsetHeight ?? 0;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset - 16;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const destination = Math.min(Math.max(targetTop, 0), Math.max(maxScroll, 0));
+
+    if (prefersReducedMotion.matches || instant) {
+      window.scrollTo(0, destination);
+      focusAfterScroll(target);
+      return;
+    }
+
+    try {
+      window.scrollTo({
+        top: destination,
+        behavior: 'smooth'
+      });
+    } catch (error) {
+      window.scrollTo(0, destination);
+    }
+
+    window.clearTimeout(scrollFocusTimeout);
+    scrollFocusTimeout = window.setTimeout(() => focusAfterScroll(target), 380);
+  };
+
+  const anchorLinks = Array.from(document.querySelectorAll('a[href^="#"]:not([href="#"])'));
+  anchorLinks.forEach((link) => {
+    const href = link.getAttribute('href');
+    const targetId = href?.slice(1);
+    if (!targetId) {
+      return;
+    }
+
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) {
+      return;
+    }
+
+    link.addEventListener('click', (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+      }
+
+      event.preventDefault();
+      const instant = link.classList.contains('skip-link');
+      smoothScrollTo(targetElement, { instant });
+    });
+  });
+
   const updateHeaderState = () => {
     if (!header) return;
     header.classList.toggle('is-scrolled', window.scrollY > 12);
   };
 
-  updateHeaderState();
-  window.addEventListener('scroll', updateHeaderState, { passive: true });
+  const updateScrollProgress = () => {
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollHeight <= 0) {
+      root.style.setProperty('--scroll-progress', '0%');
+      return;
+    }
+
+    const progress = Math.min(Math.max(window.scrollY / scrollHeight, 0), 1);
+    root.style.setProperty('--scroll-progress', `${(progress * 100).toFixed(2)}%`);
+  };
+
+  const handleScroll = () => {
+    updateHeaderState();
+    updateScrollProgress();
+  };
+
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
 
   const navLinks = Array.from(document.querySelectorAll('[data-nav-target]'));
   const setActiveLink = (id) => {
@@ -132,7 +231,20 @@
   }
 
   const revealElements = document.querySelectorAll('.reveal');
-  if (revealElements.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  revealElements.forEach((element, index) => {
+    const customDelay = element.dataset.revealDelay;
+    if (customDelay) {
+      element.style.setProperty('--reveal-delay', customDelay);
+      return;
+    }
+
+    if (!element.style.getPropertyValue('--reveal-delay')) {
+      const delay = Math.min(index * 80, 480);
+      element.style.setProperty('--reveal-delay', `${delay}ms`);
+    }
+  });
+
+  if (revealElements.length && !prefersReducedMotion.matches) {
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -152,6 +264,12 @@
   } else {
     revealElements.forEach((element) => element.classList.add('in-view'));
   }
+
+  prefersReducedMotion.addEventListener('change', (event) => {
+    if (event.matches) {
+      revealElements.forEach((element) => element.classList.add('in-view'));
+    }
+  });
 
   const contactForm = document.querySelector('.contact-form');
   if (contactForm instanceof HTMLFormElement) {
