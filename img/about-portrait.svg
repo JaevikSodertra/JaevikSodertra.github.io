@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait illustration of Artem Chernov</title>
+  <desc id="desc">Simplified illustrated portrait with gradients aligned to the site's visual style.</desc>
+  <defs>
+    <radialGradient id="portraitBg" cx="0.25" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#00d4ff" />
+      <stop offset="0.5" stop-color="#132a45" />
+      <stop offset="1" stop-color="#0a1426" />
+    </radialGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d3755" />
+      <stop offset="1" stop-color="#0f1f33" />
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c4dff" />
+      <stop offset="1" stop-color="#4b24b7" />
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" rx="200" fill="url(#portraitBg)" />
+  <circle cx="200" cy="150" r="90" fill="#f4f7fb" fill-opacity="0.9" />
+  <path d="M88 340 C118 250 282 250 312 340 Z" fill="url(#jacket)" />
+  <path d="M148 310 C168 260 232 260 252 310 Z" fill="url(#shirt)" />
+  <circle cx="200" cy="160" r="78" fill="#f4f7fb" fill-opacity="0.92" />
+  <path d="M148 150 C158 126 242 126 252 150" fill="none" stroke="#5b7cff" stroke-width="10" stroke-linecap="round" opacity="0.45" />
+  <circle cx="176" cy="174" r="10" fill="#192c46" />
+  <circle cx="224" cy="174" r="10" fill="#192c46" />
+  <path d="M180 210 C190 222 210 222 220 210" fill="none" stroke="#192c46" stroke-width="8" stroke-linecap="round" />
+</svg>

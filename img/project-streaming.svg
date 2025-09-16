@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Logistics streaming dashboard illustration</title>
+  <desc id="desc">Gradient background with stylised shipping containers and timeline connections to symbolise logistics monitoring.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061837" />
+      <stop offset="1" stop-color="#0c2b4f" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d4ff" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#7c4dff" stop-opacity="0.15" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#bg)" />
+
+  <g opacity="0.55">
+    <circle cx="140" cy="120" r="120" fill="#00d4ff" fill-opacity="0.12" />
+    <circle cx="740" cy="80" r="140" fill="#7c4dff" fill-opacity="0.18" />
+    <circle cx="620" cy="520" r="170" fill="#00a4ff" fill-opacity="0.14" />
+    <circle cx="240" cy="500" r="140" fill="#7c4dff" fill-opacity="0.13" />
+  </g>
+
+  <g fill="#0b1f3f" stroke="#16365f" stroke-width="2" opacity="0.85">
+    <rect x="80" y="330" width="180" height="120" rx="14" />
+    <rect x="280" y="300" width="200" height="140" rx="16" />
+    <rect x="510" y="320" width="210" height="130" rx="16" />
+  </g>
+
+  <g stroke="#122b4d" stroke-width="2" opacity="0.6">
+    <line x1="80" y1="370" x2="260" y2="260" />
+    <line x1="260" y1="260" x2="410" y2="230" />
+    <line x1="410" y1="230" x2="580" y2="250" />
+    <line x1="580" y1="250" x2="720" y2="210" />
+  </g>
+
+  <g fill="none" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" opacity="0.55">
+    <polyline points="120 380 220 280 360 260 520 280 660 240 760 280" />
+  </g>
+
+  <g opacity="0.35" stroke="#7c4dff" stroke-width="4" stroke-linecap="round">
+    <path d="M100 450 C 220 430 280 480 360 470" />
+    <path d="M380 470 C 460 460 540 500 620 490" />
+    <path d="M640 490 C 720 480 780 500 820 520" />
+  </g>
+
+  <g stroke="#132e52" stroke-width="4" stroke-linecap="round" opacity="0.75">
+    <line x1="120" y1="360" x2="220" y2="360" />
+    <line x1="300" y1="340" x2="460" y2="340" />
+    <line x1="300" y1="376" x2="460" y2="376" />
+    <line x1="300" y1="412" x2="460" y2="412" />
+    <line x1="540" y1="356" x2="700" y2="356" />
+    <line x1="540" y1="392" x2="700" y2="392" />
+    <line x1="540" y1="428" x2="700" y2="428" />
+  </g>
+
+  <g opacity="0.9">
+    <rect x="84" y="334" width="172" height="48" rx="10" fill="#0c274d" stroke="#00d4ff" stroke-width="1.6" />
+    <rect x="288" y="304" width="188" height="52" rx="12" fill="#102f58" stroke="#7c4dff" stroke-width="1.6" />
+    <rect x="520" y="324" width="190" height="50" rx="12" fill="#102f58" stroke="#00d4ff" stroke-width="1.6" />
+  </g>
+
+  <g opacity="0.4" fill="none" stroke="url(#glow)" stroke-width="3" stroke-dasharray="12 12">
+    <path d="M160 160 C 300 220 420 180 520 240" />
+    <path d="M520 240 C 640 300 720 260 820 320" />
+  </g>
+
+  <g fill="#00d4ff" opacity="0.7">
+    <circle cx="120" cy="380" r="6" />
+    <circle cx="220" cy="280" r="8" />
+    <circle cx="360" cy="260" r="9" />
+    <circle cx="520" cy="280" r="8" />
+    <circle cx="660" cy="240" r="10" />
+    <circle cx="760" cy="280" r="7" />
+  </g>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Observability illustration</title>
+  <desc id="desc">Multiple screens with charts and status lights reflecting observability and reliability dashboards.</desc>
+  <defs>
+    <linearGradient id="bgObs" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#03101e" />
+      <stop offset="1" stop-color="#0d2233" />
+    </linearGradient>
+    <linearGradient id="screenA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#182c47" />
+      <stop offset="1" stop-color="#0f1f32" />
+    </linearGradient>
+    <linearGradient id="screenB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#213652" />
+      <stop offset="1" stop-color="#112032" />
+    </linearGradient>
+    <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d4ff" />
+      <stop offset="1" stop-color="#7c4dff" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#bgObs)" />
+
+  <g opacity="0.3">
+    <circle cx="200" cy="160" r="140" fill="#00d4ff" fill-opacity="0.25" />
+    <circle cx="720" cy="140" r="160" fill="#7c4dff" fill-opacity="0.25" />
+    <circle cx="450" cy="470" r="200" fill="#00a6ff" fill-opacity="0.2" />
+  </g>
+
+  <g opacity="0.92">
+    <rect x="180" y="170" width="540" height="260" rx="26" fill="url(#screenA)" stroke="#1f3852" stroke-width="2" />
+    <rect x="220" y="210" width="240" height="160" rx="18" fill="#0f1f33" stroke="#25405b" stroke-width="1.5" />
+    <rect x="480" y="210" width="180" height="120" rx="18" fill="#0f1f33" stroke="#25405b" stroke-width="1.5" />
+    <rect x="480" y="340" width="180" height="70" rx="16" fill="#0f1f33" stroke="#25405b" stroke-width="1.5" />
+    <rect x="260" y="120" width="320" height="60" rx="20" fill="url(#screenB)" opacity="0.85" />
+    <rect x="240" y="460" width="420" height="80" rx="20" fill="url(#screenB)" opacity="0.85" />
+  </g>
+
+  <g fill="none" stroke="url(#lineGradient)" stroke-width="3" stroke-linecap="round" opacity="0.75">
+    <path d="M240 250 L280 220 L320 245 L360 210 L400 240 L440 230 L460 250" />
+    <path d="M520 260 L560 230 L600 260 L640 240" />
+    <path d="M260 500 L320 480 L380 510 L440 492 L500 515 L560 500 L620 520" />
+  </g>
+
+  <g opacity="0.6" stroke="#00d4ff" stroke-width="2.6" stroke-linecap="round">
+    <path d="M240 320 L280 300 L320 330 L360 310 L400 336 L440 320" />
+  </g>
+
+  <g opacity="0.55" stroke="#7c4dff" stroke-width="2.4" stroke-linecap="round">
+    <path d="M520 300 L560 320 L600 290 L640 310" />
+  </g>
+
+  <g fill="#00d4ff" opacity="0.75">
+    <circle cx="240" cy="250" r="6" />
+    <circle cx="280" cy="220" r="6" />
+    <circle cx="320" cy="245" r="6" />
+    <circle cx="360" cy="210" r="6" />
+    <circle cx="400" cy="240" r="6" />
+    <circle cx="440" cy="230" r="6" />
+    <circle cx="460" cy="250" r="6" />
+    <circle cx="520" cy="260" r="6" />
+    <circle cx="560" cy="230" r="6" />
+    <circle cx="600" cy="260" r="6" />
+    <circle cx="640" cy="240" r="6" />
+  </g>
+
+  <g fill="#13d89f" opacity="0.8">
+    <circle cx="520" cy="360" r="7" />
+    <circle cx="560" cy="360" r="7" />
+    <circle cx="600" cy="360" r="7" />
+    <circle cx="640" cy="360" r="7" />
+  </g>
+
+  <g fill="#ffb400" opacity="0.85">
+    <circle cx="520" cy="384" r="6" />
+    <circle cx="560" cy="384" r="6" />
+    <circle cx="600" cy="384" r="6" />
+    <circle cx="640" cy="384" r="6" />
+  </g>
+
+  <g fill="#ff6b6b" opacity="0.85">
+    <circle cx="520" cy="408" r="6" />
+    <circle cx="560" cy="408" r="6" />
+    <circle cx="600" cy="408" r="6" />
+    <circle cx="640" cy="408" r="6" />
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar illustration: finance lead</title>
+  <desc id="desc">Abstract portrait with teal and violet gradients representing a finance executive.</desc>
+  <defs>
+    <radialGradient id="bgFin" cx="0.6" cy="0.25" r="0.85">
+      <stop offset="0" stop-color="#7c4dff" />
+      <stop offset="1" stop-color="#0b1c33" />
+    </radialGradient>
+    <linearGradient id="shirtFin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#233a60" />
+      <stop offset="1" stop-color="#15233f" />
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" rx="100" fill="url(#bgFin)" />
+  <circle cx="100" cy="80" r="44" fill="#f2f6ff" fill-opacity="0.9" />
+  <path d="M56 168 C70 130 130 130 144 168 Z" fill="url(#shirtFin)" />
+  <path d="M72 70 C82 52 118 52 128 70" fill="none" stroke="#7c9cff" stroke-width="6" stroke-linecap="round" opacity="0.4" />
+  <circle cx="86" cy="86" r="6" fill="#15233f" />
+  <circle cx="114" cy="86" r="6" fill="#15233f" />
+  <path d="M88 110 C96 118 104 118 112 110" fill="none" stroke="#15233f" stroke-width="5" stroke-linecap="round" />
+</svg>

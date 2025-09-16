@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Cost analytics illustration</title>
+  <desc id="desc">Stylised stacked cards and charts with gradient background to represent expense transparency.</desc>
+  <defs>
+    <linearGradient id="bgCost" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#120b2b" />
+      <stop offset="1" stop-color="#1b123b" />
+    </linearGradient>
+    <linearGradient id="cardA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4c2bff" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#00d4ff" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="cardB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f225c" />
+      <stop offset="1" stop-color="#13173d" />
+    </linearGradient>
+    <linearGradient id="barA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00d4ff" />
+      <stop offset="1" stop-color="#0064ff" />
+    </linearGradient>
+    <linearGradient id="barB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7c4dff" />
+      <stop offset="1" stop-color="#352175" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#bgCost)" />
+
+  <g opacity="0.35">
+    <circle cx="220" cy="160" r="160" fill="#00d4ff" fill-opacity="0.25" />
+    <circle cx="680" cy="120" r="140" fill="#7c4dff" fill-opacity="0.28" />
+    <circle cx="720" cy="460" r="180" fill="#00a6ff" fill-opacity="0.2" />
+  </g>
+
+  <g opacity="0.9">
+    <rect x="190" y="200" width="520" height="300" rx="32" fill="url(#cardB)" stroke="#253068" stroke-width="2" />
+    <rect x="230" y="240" width="260" height="120" rx="18" fill="#141942" stroke="#2b3a7b" stroke-width="1.4" />
+    <rect x="230" y="380" width="260" height="80" rx="18" fill="#141942" stroke="#2b3a7b" stroke-width="1.4" />
+    <rect x="520" y="240" width="150" height="220" rx="18" fill="#141942" stroke="#2b3a7b" stroke-width="1.4" />
+    <rect x="430" y="140" width="240" height="70" rx="20" fill="url(#cardA)" opacity="0.8" />
+  </g>
+
+  <g fill="none" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <path d="M260 290 L320 260 L380 310 L420 270 L460 300" />
+    <path d="M260 430 L320 412 L360 440 L400 420 L440 436" />
+  </g>
+
+  <g fill="none" stroke="#7c4dff" stroke-width="3" stroke-linecap="round" opacity="0.55">
+    <path d="M550 320 L590 280 L630 330 L660 300" />
+  </g>
+
+  <g fill="url(#barA)" opacity="0.9">
+    <rect x="540" y="320" width="28" height="110" rx="8" />
+    <rect x="580" y="300" width="28" height="130" rx="8" />
+    <rect x="620" y="340" width="28" height="90" rx="8" />
+  </g>
+
+  <g fill="url(#barB)" opacity="0.9">
+    <rect x="260" y="260" width="22" height="70" rx="6" />
+    <rect x="300" y="250" width="22" height="80" rx="6" />
+    <rect x="340" y="270" width="22" height="60" rx="6" />
+    <rect x="380" y="255" width="22" height="75" rx="6" />
+  </g>
+
+  <g fill="#00d4ff" opacity="0.7">
+    <circle cx="260" cy="290" r="6" />
+    <circle cx="320" cy="260" r="6" />
+    <circle cx="380" cy="310" r="6" />
+    <circle cx="420" cy="270" r="6" />
+    <circle cx="460" cy="300" r="6" />
+  </g>
+
+  <g fill="#7c4dff" opacity="0.7">
+    <circle cx="260" cy="430" r="5" />
+    <circle cx="320" cy="412" r="5" />
+    <circle cx="360" cy="440" r="5" />
+    <circle cx="400" cy="420" r="5" />
+    <circle cx="440" cy="436" r="5" />
+  </g>
+</svg>
