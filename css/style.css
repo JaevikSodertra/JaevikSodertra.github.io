@@ -1,12 +1,17 @@
 /* Шрифт */
 :root{
+  --bg:#f6f7fb; --panel:rgba(0,0,0,.04); --text:#1e1e1e; --muted:#4c4c4c;
+  --brand:#00d4ff; --brand-2:#7c4dff; --border:rgba(0,0,0,.1);
+  --shadow:0 12px 32px rgba(0,0,0,.12); --radius:18px;
+  --gradient-overlay:linear-gradient(180deg, rgba(255,255,255,.85), transparent 60%);
+  --hero-dim:1.1;
+}
+[data-theme="dark"]{
   --bg:#0b0c10; --panel:rgba(255,255,255,.06); --text:#e8e8e8; --muted:#b8b8b8;
   --brand:#00d4ff; --brand-2:#7c4dff; --border:rgba(255,255,255,.12);
-  --shadow:0 12px 40px rgba(0,0,0,.45); --radius:18px;
-}
-[data-theme="light"]{
-  --bg:#f6f7fb; --panel:rgba(0,0,0,.04); --text:#1e1e1e; --muted:#4c4c4c;
-  --border:rgba(0,0,0,.1); --shadow:0 12px 32px rgba(0,0,0,.12);
+  --shadow:0 12px 40px rgba(0,0,0,.45);
+  --gradient-overlay:linear-gradient(180deg, rgba(0,0,0,.35), transparent 60%);
+  --hero-dim:.45;
 }
 
 *{box-sizing:border-box}
@@ -36,7 +41,7 @@ p{margin:0 0 16px;max-width:70ch} ul,li{margin:0 0 8px 20px;padding:0}
 .gradient{position:absolute;inset:0 -10%;height:280px;z-index:-1;background:
   radial-gradient(600px 180px at 10% 10%, rgba(0,212,255,.2), transparent 70%),
   radial-gradient(700px 220px at 70% -40%, rgba(124,77,255,.25), transparent 70%),
-  linear-gradient(180deg, rgba(0,0,0,.35), transparent 60%);filter:blur(16px) saturate(1.1)}
+  var(--gradient-overlay);filter:blur(16px) saturate(1.1)}
 
 /* HERO: фон-картинка на всю ширину + градиент для контраста */
 .hero{
@@ -51,7 +56,7 @@ p{margin:0 0 16px;max-width:70ch} ul,li{margin:0 0 8px 20px;padding:0}
 .hero-bg{ position:absolute; inset:0; z-index:0; }
 .hero-bg img{
   width:100%; height:100%; object-fit:cover;
-  filter:brightness(.45) blur(2px);
+  filter:brightness(var(--hero-dim)) blur(2px);
 }
 .hero::after{
   content:""; position:absolute; inset:0; z-index:1;
