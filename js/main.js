@@ -8,6 +8,12 @@
   const header = document.querySelector('.site-header');
   const navBackdrop = document.querySelector('.nav-backdrop');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const greetingText = document.querySelector('[data-greeting-text]');
+  const greetingTime = document.querySelector('[data-greeting-time]');
+  const nowRotator = document.querySelector('[data-now-rotator]');
+  const contactResponse = document.querySelector('[data-contact-response]');
+  const contactDefaultMessage =
+    contactResponse?.dataset.contactDefault?.trim() ?? contactResponse?.textContent?.trim() ?? '';
 
   const getStoredTheme = () => {
     try {
@@ -197,6 +203,49 @@
   handleScroll();
   window.addEventListener('scroll', handleScroll, { passive: true });
 
+  const MOSCOW_UTC_OFFSET_MINUTES = -180;
+  const greetingTimeFormatter = new Intl.DateTimeFormat('ru-RU', {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  const updateGreeting = () => {
+    if (!greetingText && !greetingTime) {
+      return;
+    }
+
+    const now = new Date();
+    const localOffset = now.getTimezoneOffset();
+    const offsetDiff = (MOSCOW_UTC_OFFSET_MINUTES - localOffset) * 60_000;
+    const moscowDate = new Date(now.getTime() + offsetDiff);
+    const hour = moscowDate.getHours();
+
+    let message = 'Привет!';
+    if (hour >= 5 && hour < 12) {
+      message = 'Доброе утро! Смотрю свежие метрики и готов обсудить гипотезы.';
+    } else if (hour >= 12 && hour < 17) {
+      message = 'Добрый день! Погружён в продуктовые решения и архитектуру данных.';
+    } else if (hour >= 17 && hour < 22) {
+      message = 'Добрый вечер! Подвожу итоги по пайплайнам и планирую эксперименты.';
+    } else {
+      message = 'Доброй ночи! Дежурю за стабильность данных и алертов.';
+    }
+
+    if (greetingText) {
+      greetingText.textContent = message;
+    }
+
+    if (greetingTime) {
+      greetingTime.dateTime = moscowDate.toISOString();
+      greetingTime.textContent = greetingTimeFormatter.format(moscowDate);
+    }
+  };
+
+  if (greetingText || greetingTime) {
+    updateGreeting();
+    window.setInterval(updateGreeting, 60_000);
+  }
+
   const navLinks = Array.from(document.querySelectorAll('[data-nav-target]'));
   const setActiveLink = (id) => {
     navLinks.forEach((link) => {
@@ -265,13 +314,91 @@
     revealElements.forEach((element) => element.classList.add('in-view'));
   }
 
+  const nowItems = nowRotator ? Array.from(nowRotator.querySelectorAll('[data-now-item]')) : [];
+  let nowRotationIndex = 0;
+  let nowRotationId;
+
+  const updateNowActive = (index) => {
+    if (!nowItems.length) {
+      return;
+    }
+
+    nowItems.forEach((item, itemIndex) => {
+      const isActive = itemIndex === index;
+      item.classList.toggle('is-active', isActive);
+      item.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+    });
+  };
+
+  const stopNowRotation = () => {
+    if (nowRotationId) {
+      window.clearInterval(nowRotationId);
+      nowRotationId = undefined;
+    }
+  };
+
+  const startNowRotation = () => {
+    if (nowItems.length <= 1) {
+      return;
+    }
+
+    stopNowRotation();
+    nowRotationId = window.setInterval(() => {
+      nowRotationIndex = (nowRotationIndex + 1) % nowItems.length;
+      updateNowActive(nowRotationIndex);
+    }, 5200);
+  };
+
+  if (nowItems.length) {
+    nowRotationIndex = 0;
+    updateNowActive(nowRotationIndex);
+    if (!prefersReducedMotion.matches && nowItems.length > 1) {
+      startNowRotation();
+    }
+  }
+
   prefersReducedMotion.addEventListener('change', (event) => {
     if (event.matches) {
       revealElements.forEach((element) => element.classList.add('in-view'));
+      stopNowRotation();
+      nowRotationIndex = 0;
+      updateNowActive(nowRotationIndex);
+    } else if (nowItems.length > 1) {
+      nowRotationIndex = 0;
+      updateNowActive(nowRotationIndex);
+      startNowRotation();
     }
   });
 
+  const setContactResponseMessage = (value) => {
+    if (!contactResponse) {
+      return;
+    }
+
+    const trimmed = value?.trim();
+    if (trimmed) {
+      contactResponse.textContent = `Спасибо, ${trimmed}! Подготовлю для вас план и отвечу в течение дня.`;
+    } else {
+      contactResponse.textContent = contactDefaultMessage;
+    }
+  };
+
+  if (contactResponse) {
+    setContactResponseMessage('');
+  }
+
   const contactForm = document.querySelector('.contact-form');
+  const contactNameInput = contactForm?.querySelector('input[name="name"]');
+
+  const refreshContactResponse = () => {
+    setContactResponseMessage(contactNameInput?.value ?? '');
+  };
+
+  if (contactNameInput) {
+    contactNameInput.addEventListener('input', refreshContactResponse);
+    refreshContactResponse();
+  }
+
   if (contactForm instanceof HTMLFormElement) {
     const statusEl = contactForm.querySelector('.form-status');
     contactForm.addEventListener('submit', async (event) => {
@@ -295,6 +422,7 @@
           contactForm.reset();
           statusEl.textContent = 'Сообщение отправлено!';
           statusEl.classList.add('success');
+          refreshContactResponse();
         } else {
           statusEl.textContent = 'Не удалось отправить. Попробуйте позже.';
           statusEl.classList.add('error');
