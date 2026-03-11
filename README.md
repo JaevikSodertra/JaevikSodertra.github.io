@@ -1,26 +1,30 @@
 # jaeviksodertra.github.io
 
-Персональный сайт и портфолио дата‑инженера. Статичный сайт на HTML, CSS и JavaScript.
+Персональный сайт и портфолио архитектора платформ данных Артёма Чернова. Статический сайт, реализованный на чистом HTML, CSS и JavaScript без сторонних фреймворков.
 
-## Используемые технологии
+## Технологии
+
 - HTML5
 - CSS3
 - JavaScript (vanilla)
 - GitHub Pages
 
-## Деплой на GitHub Pages
-Репозиторий `JaevikSodertra/JaevikSodertra.github.io` автоматически публикуется через GitHub Pages из ветки `main`. После отправки коммита подождите несколько минут и проверьте сайт по адресу <https://jaeviksodertra.github.io/>.
+## Публикация
 
-## Статистика посещений
-На сайте подключён self-hosted [Plausible](https://plausible.io/) (`https://plausible.example.com`, домен `jaeviksodertra.github.io`).
+Репозиторий `JaevikSodertra/JaevikSodertra.github.io` публикуется автоматически через GitHub Pages из ветки `main`. После отправки коммита дождитесь нескольких минут и проверьте результат на сайте: <https://jaeviksodertra.github.io/>.
 
-Посмотреть метрики можно в панели <https://plausible.example.com/jaeviksodertra.github.io> (нужны учётные данные).
+## Аналитика посещений
+
+На сайте используется self-hosted инстанс [Plausible Analytics](https://plausible.io/) (домен `jaeviksodertra.github.io`).
+
+Просмотр метрик доступен в панели управления (требуются учётные данные): <https://plausible.example.com/jaeviksodertra.github.io>.
 
 ### Исключение собственных визитов
-Чтобы не учитывать свою активность, один раз откройте сайт с параметром `?no-track`:
+
+Чтобы собственные посещения не учитывались в статистике, откройте сайт с параметром `?no-track`:
 
 ```
 https://jaeviksodertra.github.io/?no-track
 ```
 
-Страница установит флаг `plausible_ignore` в `localStorage`, и дальнейшие посещения с этого браузера не будут попадать в статистику. Чтобы снова считать визиты, удалите этот ключ из `localStorage`.
+Страница запишет флаг `plausible_ignore` в `localStorage`, после чего все последующие визиты из этого браузера перестанут отслеживаться. Для возобновления отслеживания удалите данный ключ из `localStorage`.
