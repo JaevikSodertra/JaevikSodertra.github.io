@@ -37,7 +37,7 @@
 
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
   const storedTheme = getStoredTheme();
-  applyTheme(storedTheme ?? (systemPrefersDark.matches ? 'dark' : 'light'));
+  applyTheme(storedTheme ?? 'dark');
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
