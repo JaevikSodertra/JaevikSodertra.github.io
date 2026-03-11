@@ -243,6 +243,16 @@ ul li::before {
   align-items: center;
 }
 
+.hero-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(139, 92, 246, 0.4);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
 .hero-copy h1 .accent {
   display: block;
   background: var(--accent-gradient);
